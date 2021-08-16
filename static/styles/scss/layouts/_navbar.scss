@@ -1,0 +1,119 @@
+.g-nav {
+  position: relative;
+  backdrop-filter: blur(4px);
+
+  @include pseudo(after) {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: rem(880);
+    background: rgba(122, 147, 247, 0.2);
+    top: rem(-150);
+    left: rem(-150);
+    filter: blur(500px);
+    z-index: -1;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  .navbar-brand {
+    cursor: pointer;
+  }
+
+  @include pseudo(before) {
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: rem(880);
+    background: rgba(255, 146, 135, 0.2);
+    top: rem(-150);
+    right: rem(-150);
+    filter: blur(500px);
+    z-index: -1;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  &__top {
+    @include justify-end();
+    @include advancedRem(padding, (28px 0 25px 0));
+  }
+
+  &__bottom {
+    @include advancedRem(padding, (43px 0 37px 0));
+  }
+
+  &__border {
+    border-bottom: 1px solid $solid-blue-border;
+  }
+
+  .btn-login {
+    @include advancedRem(margin, (0 24px 0 110px));
+  }
+
+  .address-info {
+    @include align-center();
+
+    * {
+      color: $dark-gray;
+    }
+
+    address,
+    a {
+      @include advancedRem(padding, 0 8px);
+      position: relative;
+      margin-right: 6px;
+    }
+
+    a {
+      @include transition();
+      @include action-css((hover, active)) {
+        color: $red-clr;
+      }
+    }
+
+    .border-right {
+      @include pseudo(after) {
+        content: "";
+        position: absolute;
+        right: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: rem(21);
+        background-color: $dark-gray;
+        @include toRem(width, 2);
+      }
+    }
+  }
+
+  .auth-side {
+    @include flex-center();
+    flex-shrink: 0;
+  }
+
+  &__links {
+    @include flex-center();
+    justify-content: center;
+  }
+
+  &__link {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &-list {
+      @include flex-center();
+      list-style: none;
+      margin-bottom: 0;
+
+      a {
+        @include advancedRem(padding, (8px 15px));
+        color: $dark-gray;
+        display: block;
+        @include transition();
+
+        @include action-css((hover, active)) {
+          color: $red-clr;
+        }
+      }
+    }
+  }
+}

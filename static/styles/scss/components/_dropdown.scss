@@ -1,0 +1,28 @@
+.g-dropdown {
+  .g-btn {
+    margin-left: rem(22);
+  }
+}
+
+.dropdown-menu {
+  @include visually-hidden();
+}
+
+.dropdown-menu.show {
+  position: absolute;
+  display: block;
+  clip-path: none;
+  clip: auto;
+  @include show-hidden();
+  animation: fade-in .2s linear forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateZ(25px) !important;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,13 @@
+.g-flex {
+  @include align-center();
+  flex-wrap: nowrap;
+
+
+  &__shrink-0 {
+    flex-shrink: 0;
+  }
+
+  &__grow {
+    flex-grow: 1;
+  }
+}

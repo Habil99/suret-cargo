@@ -1,0 +1,24 @@
+.hidden {
+  @include visually-hidden();
+}
+
+.g-fade-relative {
+  position: relative;
+}
+
+.g-title__lg {
+  @include font-size(54, 400);
+  line-height: rem(82);
+}
+
+.g-title__md {
+  @include font-size(38, 400);
+}
+
+.g-title__blue {
+  color: $blue-clr;
+}
+
+.g-title__black {
+  color: $black-clr;
+}

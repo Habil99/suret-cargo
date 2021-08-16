@@ -11,3 +11,52 @@
 @function shade($color, $percentage) {
   @return mix(black, $color, $percentage);
 }
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function rem($value, $base: 16) {
+  $result: $value / $base + rem;
+
+  @return $result;
+}
+
+@function convert($value, $convertUnit, $convertBase: 16px) {
+  $currentUnit: unit($value);
+  $strippedValue: $value / ($value * 0 + 1);
+  @if not unitless($convertBase) {
+    @if unit($convertBase) != px {
+      @error "Not supported unit '#{unit($convertBase)}' as convert base!";
+    }
+    $convertBase: $convertBase / ($convertBase * 0 + 1);
+  }
+
+  @if $currentUnit == px {
+    @if $convertUnit == "em" {
+      @return 0em + ($strippedValue / $convertBase);
+    } @else if $convertUnit == "%" {
+      @return percentage($strippedValue / $convertBase);
+    }
+  } @else if $currentUnit == em {
+    @if $convertUnit == "px" {
+      @return 0px + ($strippedValue * $convertBase);
+    } @else if $convertUnit == "%" {
+      @return percentage($strippedValue);
+    }
+  } @else if $currentUnit == "%" {
+    @if $convertUnit == "px" {
+      @return 0em + ($strippedValue * $convertBase / 100);
+    } @else if $convertUnit == "em" {
+      @return 0em + ($strippedValue / 100);
+    }
+  } @else if $currentUnit == pt {
+    @if $convertUnit == "px" {
+      @return 0px + ($strippedValue * 1.3333);
+    } @else if $convertUnit == "em" {
+      @return 0em + ($strippedValue / 12);
+    } @else if $convertUnit == "%" {
+      @return percentage($strippedValue / 12);
+    }
+  }
+  @error "Can't convert '#{$value}' to unit '#{$convertUnit}'!";
+}

@@ -1,21 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Suret cargo" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="" />
-    <meta property="og:description" content="Suret cargo" />
-    <meta property="og:image" content="" />
 
-    <title>Document</title>
-    <link rel="stylesheet" href="static/styles/css/bootstrap/bootstrap.css">
-    <link rel="stylesheet" href="static/styles/css/index.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Suret cargo" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:description" content="Suret cargo" />
+  <meta property="og:image" content="" />
 
-  <body>
-      <main>Home</main>
-  </body>
+  <title>Document</title>
+  <link rel="stylesheet" href="static/styles/css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="static/styles/css/main.css" />
+</head>
+
+<body>
+
+  <!--------------------------- Navbar --------------------------->
+  <nav class="g-nav">
+    <div class="g-nav__border">
+      <div class="g-container">
+        <div class="g-nav__top">
+          <div class="address-info">
+            <address class="border-right">Masazır qəsəbəsi, Əliağa Vahid küçəsi</address>
+            <a class="border-right" href="tel:+">*4466</a>
+            <a href="mailto:hello@suretkargo.az">hello@suretkargo.az</a>
+          </div>
+          <div class="auth-side">
+            <a href="javascript:void(0)" class="g-btn g-btn__sm g-btn__red btn-login">Daxil ol</a>
+            <a href="javascript:void(0)" class="g-btn g-btn__sm g-btn__red--outline">Qeydiyyat</a>
+          </div>
+          <div class="g-dropdown language-dropdown">
+            <button class="g-btn g-fade-relative" id="languagedropdown" aria-expanded="false" aria-haspopup="true"
+              data-bs-toggle="dropdown">
+              <img src="./static/assets/svgs/language.svg" alt="Surat Cargo" />
+            </button>
+            <div class="dropdown-menu" aria-labelledby="languagedropdown">
+              <a href="">Az</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="g-container">
+      <div class="g-nav__bottom">
+        <div class="g-flex">
+          <div class="">
+            <a class="navbar-brand">
+              <img src="./static/assets/svgs/logo.svg" alt="Surat Cargo">
+            </a>
+          </div>
+          <div class="g-flex__shrink-0 g-flex__grow">
+            <div class="g-nav__links">
+              <ul class="g-nav__link-list">
+                <li class="g-nav__link">
+                  <a href="javascript:void(0)">Ana səhifə</a>
+                </li>
+                <li class="g-nav__link">
+                  <a href="javascript:void(0)">Haqqımızda</a>
+                </li>
+                <li class="g-nav__link">
+                  <a href="javascript:void(0)">Xidmətlər</a>
+                </li>
+                <li class="g-nav__link">
+                  <a href="javascript:void(0)">Tez-tez verilən suallar</a>
+                </li>
+                <li class="g-nav__link">
+                  <a href="javascript:void(0)">Əlaqə</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="">
+            <a class="g-btn g-btn__blue g-btn__md" href="javascript:void(0)">Sifariş et</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--------------------------- Navbar --------------------------->
+
+  <!--------------------------- Introduction Banner --------------------------->
+
+  <section class="intro-section">
+    <div class="g-container">
+      <div class="intro-section__grid">
+        <div class="intro-section-content">
+          <h1 class="g-title__lg g-title__blue">Hər şey <br> barmaqlarınızın <br> ucunda!</h1>
+          <a class="g-btn g-btn__sm g-btn__red" href="javascript:void(0)">Ətraflı</a>
+        </div>
+        <div class="intro-section-img">
+          <img src="./static/assets/svgs/banner.svg" alt="Surat Cargo">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--------------------------- Introduction Banner --------------------------->
+
+  <script src="./static/js/min/jquery.min.js"></script>
+  <script src="./static/js/min/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  line-height: 1.1;
+  font-family: "Prompt", sans-serif !important;
+
+  *:focus {
+    outline: none;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Prompt", sans-serif !important;
+  background: $white-clr;
+  color: $dark-gray;
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: calc(100vw / 1920 * 20);
+  }
+}
+
+.btn,
+.form-control {
+  box-shadow: none;
+
+  &:focus {
+    text-shadow: none;
+  }
+}
+
+address {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none !important;
+}

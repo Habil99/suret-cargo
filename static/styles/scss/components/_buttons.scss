@@ -1,0 +1,46 @@
+.g-btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: inline-block;
+  text-decoration: none !important;
+  @include transition();
+  position: relative;
+
+  &__sm {
+    $radius: rem(67);
+    border-radius: $radius;
+    padding: rem(8) rem(32);
+    @include font-size(16, 500);
+  }
+
+  &__md {
+    @include advancedRem(padding, 10px 50px);
+    @include font-size(18, 400);
+  }
+
+  &__blue {
+    background: $blue-gradient;
+    border-radius: rem(26);
+    color: $white-clr;
+  }
+
+  &__red {
+    background: $red-gradient;
+    color: $white-clr;
+    @include action-css(hover) {
+      color: $white-clr;
+    }
+
+    &--outline {
+      background: transparent;
+      border: 1px solid $red-clr;
+
+      color: $blue-clr;
+
+      @include action-css(hover) {
+        color: $blue-clr;
+      }
+    }
+  }
+}

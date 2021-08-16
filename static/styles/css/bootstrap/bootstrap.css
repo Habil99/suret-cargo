@@ -200,9 +200,12 @@ a {
   color: #0d6efd;
   text-decoration: underline;
 }
-a:hover {
+
+/* I don`t want default hover color*/
+
+/* a:hover {
   color: #0a58ca;
-}
+} */
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
