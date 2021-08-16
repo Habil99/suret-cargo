@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/utilities/_functions.scss"
+    ],
+    "names": [],
+    "file": "main.min.css"
+}
