@@ -1,6 +1,8 @@
 # suret-cargo
 
 - <h4>Scss structure 7 - 1 pattern</h4>
+ 
+```bash
 
 sass/
 |
@@ -48,3 +50,5 @@ sass/
 |
 |
 `– main.scss             # Main Sass file
+
+```
