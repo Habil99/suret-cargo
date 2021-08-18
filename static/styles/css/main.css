@@ -96,6 +96,10 @@ a {
   text-decoration: none !important;
 }
 
+.g-fluid {
+  width: 100%;
+}
+
 .hidden {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
@@ -113,14 +117,14 @@ a {
 
 .g-title__lg {
   font-size: 3.375rem;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
   line-height: 5.125rem;
 }
 
 .g-title__md {
   font-size: 2.375rem;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -130,6 +134,13 @@ a {
 
 .g-title__black {
   color: #000;
+}
+
+.g-text {
+  color: #2f2f30;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .g-dropdown .g-btn {
@@ -194,10 +205,11 @@ a {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   position: relative;
+  border-radius: 1.625rem;
 }
 
 .g-btn__sm {
-  border-radius: 4.1875rem;
+  border-radius: 1.625rem;
   padding: 0.5rem 2rem;
   font-size: 1rem;
   font-weight: 500;
@@ -213,7 +225,6 @@ a {
 
 .g-btn__blue {
   background: linear-gradient(269.65deg, #03006c -43.69%, #aba9f7 183.89%);
-  border-radius: 1.625rem;
   color: #fff;
 }
 
@@ -234,6 +245,56 @@ a {
 
 .g-btn__red--outline:hover {
   color: #03006c;
+}
+
+.g-backdrop {
+  position: relative;
+}
+
+.g-backdrop:after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 300%;
+  max-height: 50rem;
+  top: -9.375rem;
+  left: -9.375rem;
+  -webkit-filter: blur(31.25rem);
+          filter: blur(31.25rem);
+  z-index: -1;
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.g-backdrop:before {
+  content: "";
+  position: absolute;
+  width: 55%;
+  height: 300%;
+  max-height: 50rem;
+  top: -9.375rem;
+  right: -9.375rem;
+  -webkit-filter: blur(31.25rem);
+          filter: blur(31.25rem);
+  z-index: -1;
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+          transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.g-backdrop__ltr:after {
+  background: rgba(120, 145, 247, 0.2);
+}
+
+.g-backdrop__ltr:before {
+  background: rgba(255, 143, 133, 0.2);
+}
+
+.g-backdrop__rtl:after {
+  background: rgba(255, 143, 133, 0.2);
+}
+
+.g-backdrop__rtl:before {
+  background: rgba(120, 145, 247, 0.2);
 }
 
 .g-container {
@@ -269,44 +330,8 @@ a {
           flex-grow: 1;
 }
 
-.g-nav {
-  position: relative;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
-}
-
-.g-nav:after {
-  content: "";
-  position: absolute;
-  width: 50%;
-  height: 55rem;
-  background: rgba(122, 147, 247, 0.2);
-  top: -9.375rem;
-  left: -9.375rem;
-  -webkit-filter: blur(500px);
-          filter: blur(500px);
-  z-index: -1;
-  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
-          transform: matrix(-1, 0, 0, 1, 0, 0);
-}
-
 .g-nav .navbar-brand {
   cursor: pointer;
-}
-
-.g-nav:before {
-  content: "";
-  position: absolute;
-  width: 55%;
-  height: 55rem;
-  background: rgba(255, 146, 135, 0.2);
-  top: -9.375rem;
-  right: -9.375rem;
-  -webkit-filter: blur(500px);
-          filter: blur(500px);
-  z-index: -1;
-  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
-          transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
 .g-nav__top {
@@ -471,20 +496,35 @@ a {
 }
 
 .intro-section {
+  position: relative;
   background-color: #F8F7FE;
   padding: 80px 0;
-  position: relative;
-  border-bottom: 1px solid #03006c;
 }
 
 .intro-section:after {
   content: '';
   position: absolute;
   bottom: 0;
+}
+
+.intro-section:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+}
+
+.intro-section:after {
   left: 0;
   width: 25.625rem;
   height: 0.25rem;
   background-color: #eb4838;
+}
+
+.intro-section:before {
+  right: 0;
+  width: calc(100% - 25.625rem);
+  background-color: #03006c;
+  height: 0.0625rem;
 }
 
 .intro-section__grid {
@@ -516,5 +556,22 @@ a {
 
 .intro-section .g-title__lg {
   margin-bottom: 2rem;
+}
+
+.calculator-section {
+  margin: 46px 0 200px 0;
+}
+
+.services-section .g-title__md {
+  text-transform: uppercase;
+  margin-bottom: 1.25rem;
+}
+
+.services-section__subtitle {
+  max-width: 43.75rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2.375rem;
 }
 /*# sourceMappingURL=main.css.map */

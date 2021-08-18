@@ -1,4 +1,5 @@
 .g-btn {
+  $radius: rem(26);
   border: none;
   outline: none;
   background-color: transparent;
@@ -6,10 +7,11 @@
   text-decoration: none !important;
   @include transition();
   position: relative;
+  border-radius: rem(26);
 
   &__sm {
-    $radius: rem(67);
     border-radius: $radius;
+
     padding: rem(8) rem(32);
     @include font-size(16, 500);
   }
@@ -21,7 +23,6 @@
 
   &__blue {
     background: $blue-gradient;
-    border-radius: rem(26);
     color: $white-clr;
   }
 

@@ -1,0 +1,59 @@
+.g-backdrop {
+  $pos: rem(-150);
+  $max: rem(800);
+  $blur: rem(500);
+  $blue: hsla(228, 89%, 72%, 0.2);
+  $pink: hsla(5, 100%, 76%, 0.2);
+
+  position: relative;
+
+  @include pseudo(after) {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 300%;
+    max-height: $max;
+    top: $pos;
+    left: $pos;
+    filter: blur(#{$blur});
+    z-index: -1;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  @include pseudo(before) {
+    content: "";
+    position: absolute;
+    width: 55%;
+    height: 300%;
+    max-height: rem(800);
+    top: rem(-150);
+    right: rem(-150);
+    filter: blur(#{$blur});
+    z-index: -1;
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+  }
+
+  // [ltr] => left side will be blue gradient
+  // [ltr] => right side will be red gradient
+  // [rtl] => will be vice versa
+
+  &__ltr {
+    @include pseudo(after) {
+      background: $blue;
+    }
+
+    @include pseudo(before) {
+      background: $pink;
+    }
+  }
+
+  &__rtl {
+    @include pseudo(after) {
+      background: $pink;
+    }
+    
+    @include pseudo(before) {
+      background: $blue;
+    }
+  }
+}

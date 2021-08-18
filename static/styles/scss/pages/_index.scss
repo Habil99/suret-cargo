@@ -1,17 +1,27 @@
 .intro-section {
+  $pseudo-width: rem(410);
+  position: relative;
   background-color: $light-blue;
   @include advancedRem(padding, 80px 0);
-  position: relative;
-  border-bottom: 1px solid $blue-clr;
 
-  @include pseudo(after) {
+  @include pseudo((after, before)) {
     content: '';
     position: absolute;
     bottom: 0;
+  }
+
+  @include pseudo(after) {
     left: 0;
-    @include toRem(width, 410);
+    width: $pseudo-width;
     @include toRem(height, 4);
     background-color: $red-clr;
+  }
+
+  @include pseudo(before) {
+    right: 0;
+    width: calc(100% - #{$pseudo-width});
+    background-color: $blue-clr;
+    @include toRem(height, 1);
   }
 
   &__grid {
@@ -34,5 +44,22 @@
 
   .g-title__lg {
     @include toRem(margin-bottom, 32);
+  }
+}
+
+.calculator-section {
+  @include advancedRem(margin, 46px 0 200px 0);
+}
+
+.services-section {
+  .g-title__md {
+    text-transform: uppercase;
+    @include toRem(margin-bottom, 20);
+  }
+
+  &__subtitle {
+    @include toRem(max-width, 700);
+    @include font-size(20, 400);
+    @include toRem(line-height, 38);
   }
 }

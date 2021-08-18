@@ -11,7 +11,8 @@
   <meta property="og:description" content="Suret cargo" />
   <meta property="og:image" content="" />
 
-  <title>Document</title>
+  <title>Surat Cargo</title>
+  <link rel="shortcut icon" href="./static/assets/svgs/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="static/styles/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="static/styles/css/main.css" />
 </head>
@@ -19,7 +20,7 @@
 <body>
 
   <!--------------------------- Navbar --------------------------->
-  <nav class="g-nav">
+  <nav class="g-nav g-backdrop g-backdrop__ltr">
     <div class="g-nav__border">
       <div class="g-container">
         <div class="g-nav__top">
@@ -35,7 +36,7 @@
           <div class="g-dropdown language-dropdown">
             <button class="g-btn g-fade-relative" id="languagedropdown" aria-expanded="false" aria-haspopup="true"
               data-bs-toggle="dropdown">
-              <img src="./static/assets/svgs/language.svg" alt="Surat Cargo" />
+              <img class="g-fluid" src="./static/assets/svgs/language.svg" alt="Surat Cargo" />
             </button>
             <div class="dropdown-menu" aria-labelledby="languagedropdown">
               <a href="">Az</a>
@@ -49,7 +50,7 @@
         <div class="g-flex">
           <div class="">
             <a class="navbar-brand">
-              <img src="./static/assets/svgs/logo.svg" alt="Surat Cargo">
+              <img class="g-fluid" src="./static/assets/svgs/logo.svg" alt="Surat Cargo">
             </a>
           </div>
           <div class="g-flex__shrink-0 g-flex__grow">
@@ -92,13 +93,36 @@
           <a class="g-btn g-btn__sm g-btn__red" href="javascript:void(0)">Ətraflı</a>
         </div>
         <div class="intro-section-img">
-          <img src="./static/assets/svgs/banner.svg" alt="Surat Cargo">
+          <img class="g-fluid" src="./static/assets/svgs/banner.svg" alt="Surat Cargo">
         </div>
       </div>
     </div>
   </section>
 
   <!--------------------------- Introduction Banner --------------------------->
+
+  <!--------------------------- Calculator Section --------------------------->
+
+  <section class="calculator-section"></section>
+
+  <!--------------------------- Calculator Section --------------------------->
+
+  <!--------------------------- Services Section --------------------------->
+
+  <section class="services-section g-backdrop g-backdrop__rtl">
+    <div class="g-container">
+      <div class="services-section__heading">
+        <h2 class="g-title__blue g-title__md">XİDMƏTLƏRİMİZ</h2>
+        <p class="g-text services-section__subtitle">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet
+          sint. Velit officia
+          consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+      </div>
+      <div class="services-section-cards"></div>
+    </div>
+  </section>
+
+  <!--------------------------- Services Section --------------------------->
+
 
   <script src="./static/js/min/jquery.min.js"></script>
   <script src="./static/js/min/bootstrap.bundle.min.js"></script>

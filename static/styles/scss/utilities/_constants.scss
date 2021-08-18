@@ -7,12 +7,12 @@
 }
 
 .g-title__lg {
-  @include font-size(54, 400);
+  @include font-size(54, 700);
   line-height: rem(82);
 }
 
 .g-title__md {
-  @include font-size(38, 400);
+  @include font-size(38, 500);
 }
 
 .g-title__blue {
@@ -21,4 +21,9 @@
 
 .g-title__black {
   color: $black-clr;
+}
+
+.g-text {
+  color: $dark-gray;
+  @include font-size(16, 400);
 }
