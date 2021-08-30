@@ -1,0 +1,7 @@
+.vscode
+.idea
+
+static/styles/main.css
+static/styles/main.css.map
+static/styles/main.min.css
+static/styles/main.min.css.map

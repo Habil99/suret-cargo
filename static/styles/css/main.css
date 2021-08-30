@@ -217,7 +217,7 @@ a {
 }
 
 .g-btn__md {
-  padding: 10px 50px;
+  padding: 0.625pxrem 3.125pxrem;
   font-size: 1.125rem;
   font-weight: 400;
   font-style: normal;
@@ -350,11 +350,11 @@ a {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 28px 0 25px 0;
+  padding: 1.75pxrem 0 1.5625pxrem 0;
 }
 
 .g-nav__bottom {
-  padding: 43px 0 37px 0;
+  padding: 2.6875pxrem 0 2.3125pxrem 0;
 }
 
 .g-nav__border {
@@ -362,7 +362,7 @@ a {
 }
 
 .g-nav .btn-login {
-  margin: 0 24px 0 110px;
+  margin: 0 1.5pxrem 0 6.875pxrem;
 }
 
 .g-nav .address-info {
@@ -386,7 +386,7 @@ a {
 
 .g-nav .address-info address,
 .g-nav .address-info a {
-  padding: 0 8px;
+  padding: 0 0.5pxrem;
   position: relative;
   margin-right: 6px;
 }
@@ -480,7 +480,7 @@ a {
 }
 
 .g-nav__link-list a {
-  padding: 8px 15px;
+  padding: 0.5pxrem 0.9375pxrem;
   color: #2f2f30;
   display: block;
   -webkit-transition: all 0.2s linear;
@@ -498,7 +498,7 @@ a {
 .intro-section {
   position: relative;
   background-color: #F8F7FE;
-  padding: 80px 0;
+  padding: 5pxrem 0;
 }
 
 .intro-section:after {
@@ -559,7 +559,7 @@ a {
 }
 
 .calculator-section {
-  margin: 46px 0 200px 0;
+  margin: 2.875pxrem 0 12.5pxrem 0;
 }
 
 .services-section .g-title__md {
