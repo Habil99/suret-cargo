@@ -8,8 +8,6 @@
   position: relative;
 
   @include pseudo(after) {
-    content: "";
-    position: absolute;
     width: 50%;
     height: 300%;
     max-height: $max;
@@ -21,8 +19,6 @@
   }
 
   @include pseudo(before) {
-    content: "";
-    position: absolute;
     width: 55%;
     height: 300%;
     max-height: rem(800);

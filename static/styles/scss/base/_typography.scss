@@ -1,8 +1,9 @@
-@each $type in $font-types {
+@each $type, $weight in $font-types {
   @font-face {
     font-family: $font-family;
+    font-weight: $weight;
     font-style: normal;
-    src: url("../../assets/fonts/Prompt-#{$type}.ttf") format("truetype"); 
+    src: url("../../assets/fonts/Prompt-#{$type}.ttf") format("truetype");
     // url does not have correct directory becuase of compiled css
   }
 }

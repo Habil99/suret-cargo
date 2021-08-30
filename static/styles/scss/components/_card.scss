@@ -1,0 +1,36 @@
+.service-cards {
+  @include grid-repeated-cols(350, 20);
+  margin-top: rem(80);
+
+  .service-card {
+    position: relative;
+    background-color: $light-blue;
+    @include advancedRem(padding, (65 70 50));
+    @include flex-center(column);
+    text-align: center;
+    border: 2px solid transparent;
+    z-index: 1;
+
+    @include pseudo((after, before)) {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include transition();
+    @include border-slide($white-clr, $red-clr);
+
+    &__img {
+      padding: 0 rem(25);
+      margin-bottom: rem(54);
+    }
+
+    &__title {
+      margin-bottom: rem(20);
+    }
+
+    &__description {
+      margin-bottom: rem(40);
+      font-weight: 300;
+    }
+  }
+}

@@ -68,6 +68,14 @@
   flex-direction: $dir;
 }
 
+@mixin grid-repeated-cols($size, $gap) {
+  $size: rem($size);
+  $gap: rem(20);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($size, 1fr));
+  grid-gap: $gap;
+}
+
 @mixin align-center($dir: row, $wrap: nowrap) {
   @include flexbox($dir);
   align-items: center;
@@ -149,6 +157,8 @@
 ) {
   @each $ps in $pseudos {
     &:#{$ps} {
+      content: "";
+      position: absolute;
       @content;
     }
   }
@@ -193,5 +203,63 @@
 @mixin breakpoint($min-width, $max-width) {
   @media screen and (min-width: #{$min-width}) and (max-width: #{$max-width}) {
     @content;
+  }
+}
+
+@mixin border-slide($fromColor, $color) {
+  @include pseudo((after, before)) {
+    border: 2px solid transparent;
+    width: 0;
+    height: 0;
+    z-index: -1;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  &:hover::before,
+  &:hover::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover::before {
+    border-top-color: $fromColor; 
+    border-right-color: $fromColor;
+    transition:
+      width 0.25s ease-out, 
+      height 0.25s ease-out 0.25s; 
+  }
+
+  &:hover::after {
+    border-bottom-color: $fromColor; 
+    border-left-color: $fromColor;
+    transition:
+      border-color 0s ease-out 0.5s,
+      width 0.25s ease-out 0.5s,
+      height 0.25s ease-out 0.75s;
+  }
+
+  &::after {
+    top: 0;
+    left: 0;
+  }
+
+  &:hover::before {
+    border-top-color: $color;
+    border-right-color: $color;
+  }
+
+  &:hover::after {
+    border-bottom-color: $color;
+    border-left-color: $color;
+    transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
   }
 }

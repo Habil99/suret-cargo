@@ -2,11 +2,9 @@
   $pseudo-width: rem(410);
   position: relative;
   background-color: $light-blue;
-  @include advancedRem(padding, 80px 0);
+  @include advancedRem(padding, (83 0));
 
   @include pseudo((after, before)) {
-    content: '';
-    position: absolute;
     bottom: 0;
   }
 
@@ -48,10 +46,12 @@
 }
 
 .calculator-section {
-  @include advancedRem(margin, 46px 0 200px 0);
+  @include advancedRem(margin, 46 0 0);
 }
 
 .services-section {
+  @include advancedRem(padding, (200 0));
+
   .g-title__md {
     text-transform: uppercase;
     @include toRem(margin-bottom, 20);

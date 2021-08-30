@@ -5,11 +5,11 @@
 
   &__top {
     @include justify-end();
-    @include advancedRem(padding, (28px 0 25px 0));
+    @include advancedRem(padding, (28 0 25 0));
   }
 
   &__bottom {
-    @include advancedRem(padding, (43px 0 37px 0));
+    @include advancedRem(padding, (43 0 37 0));
   }
 
   &__border {
@@ -17,7 +17,7 @@
   }
 
   .btn-login {
-    @include advancedRem(margin, (0 24px 0 110px));
+    @include advancedRem(margin, (0 24 0 110));
   }
 
   .address-info {
@@ -29,7 +29,7 @@
 
     address,
     a {
-      @include advancedRem(padding, 0 8px);
+      @include advancedRem(padding, (0 8));
       position: relative;
       margin-right: 6px;
     }
@@ -43,8 +43,6 @@
 
     .border-right {
       @include pseudo(after) {
-        content: "";
-        position: absolute;
         right: -5px;
         top: 50%;
         transform: translateY(-50%);
@@ -76,7 +74,7 @@
       margin-bottom: 0;
 
       a {
-        @include advancedRem(padding, (8px 15px));
+        @include advancedRem(padding, (8 15));
         color: $dark-gray;
         display: block;
         @include transition();

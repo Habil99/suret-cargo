@@ -17,7 +17,7 @@
   }
 
   &__md {
-    @include advancedRem(padding, 10px 50px);
+    @include advancedRem(padding, (10 52));
     @include font-size(18, 400);
   }
 

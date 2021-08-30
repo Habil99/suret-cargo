@@ -1,5 +1,12 @@
 $font-family: "Prompt";
-$font-types: ("Bold", "Regular", "SemiBold", "ExtraBold", "Medium", "Light");
+$font-types: (
+  "Bold": 700,
+  "Regular": 400,
+  "SemiBold": 600,
+  "ExtraBold": 900,
+  "Medium": 500,
+  "Light": 300,
+);
 $dark-gray: #2f2f30;
 $border-clr: #e6e6e7;
 $white-clr: #fff;
@@ -9,8 +16,9 @@ $blue-clr: #03006c;
 $blue-gradient: linear-gradient(269.65deg, #03006c -43.69%, #aba9f7 183.89%);
 $red-gradient: linear-gradient(263.14deg, #f31802 -20.94%, #f59288 114.79%);
 $solid-blue-border: #03006c99;
-$light-blue: #F8F7FE;
+$light-blue: #f8f7fe;
 $btn-radius: rem(30);
+
 $break-points: (
   "sm": rem(480),
   "md": rem(768),
