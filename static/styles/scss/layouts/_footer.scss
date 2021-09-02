@@ -34,8 +34,7 @@
         padding: rem(12) 0;
         @include transition();
 
-        &:hover,
-        &.active {
+        @include action-css((hover, active)) {
           color: $red-clr;
         }
       }
@@ -78,8 +77,6 @@
   &__social-accounts {
     @include flex-center();
     justify-content: flex-start;
-    padding-left: 0;
-    list-style: none;
 
     a {
       display: block;
@@ -88,6 +85,52 @@
       color: $blue-clr;
       
       @include advancedRem(padding, (5 8));
+    }
+  }
+
+  &__bottom {
+    margin-top: rem(68);
+    @include flexbox();
+    align-items: flex-end;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .copyright {
+      margin-right: rem(281);
+      color: #6A5E63;
+      @include font-size(14, 400);
+    }
+
+    .download-app {
+      @include flexbox();
+      align-items: flex-end;
+
+      &-text {
+        @include font-size(16, 400);
+        color: $gray-clr-2;
+        margin-right: rem(42);
+      }
+
+      a {
+        @include advancedRem(padding, (15 73));
+        display: inline-block;
+        border-radius: rem(4);
+        color: $black-clr;
+        border: 1px solid transparentize($black-clr, $amount: 0.6);
+        @include font-size(25, 400);
+        @include transition();
+
+        @include action-css() {
+          color: $red-clr;
+          border: 1px solid transparentize($red-clr, $amount: 0.4);
+        }
+        
+        &:not(:last-child) {
+          margin-right: rem(21);
+        }
+      }
     }
   }
 }

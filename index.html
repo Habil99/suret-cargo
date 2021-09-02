@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="static/styles/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="./static/styles/css/swiper/swiper.min.css">
   <link rel="stylesheet" href="static/styles/css/main.css" />
-  
+
   <link rel="stylesheet" href="./static/styles/css/fontawesome/all.min.css">
 
   <script src="./static/js/min/all.min.js"></script>
@@ -34,17 +34,125 @@
             <a class="border-right" href="tel:+">*4466</a>
             <a href="mailto:hello@suretkargo.az">hello@suretkargo.az</a>
           </div>
-          <div class="auth-side">
+          <div class="authenticated">
+            <a href="https://" class="g-btn g-btn__sm online-queues">
+              <img src="./static/assets/svgs/user-group.svg" alt="Suret Cargo">
+              <span>
+                Online növbə
+              </span>
+            </a>
+            <div class="user-dropdown">
+              <button class="g-btn g-fade-relative" id="userDropdown" aria-expanded="false" aria-haspopup="true"
+                data-bs-toggle="dropdown">
+                Nigar Musazade | 10001
+              </button>
+              <div class="g-dropdown dropdown-menu" aria-labelledby="userDropdown">
+                <ul class="dropdown-menu__list">
+                  <li>
+                    <a href="">
+                      <span class="user-dropdown__icon">
+                        <img src="./static/assets/svgs/map-mark.svg" alt="Suret Cargo">
+                      </span>
+                      <span>Xaricdəki ünvanlarım</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span class="user-dropdown__icon">
+                        <img src="./static/assets/svgs/package.svg" alt="Suret Cargo">
+                      </span>
+                      <span>Bağlamalar</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span class="user-dropdown__icon">
+                        <img src="./static/assets/svgs/cart.svg" alt="Suret Cargo">
+                      </span>
+                      <span>Sifarişlərim</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span class="user-dropdown__icon">
+                        <img src="./static/assets/svgs/coins.svg" alt="Suret Cargo">
+                      </span>
+                      <span>Balans</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span class="user-dropdown__icon">
+                        <img src="./static/assets/svgs/la_coins.svg" alt="Suret Cargo">
+                      </span>
+                      <span>Bonus Balans</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span class="user-dropdown__icon">
+                        <img src="./static/assets/svgs/ri_user-settings-line.svg" alt="Suret Cargo">
+                      </span>
+                      <span>Tənzimləmələr</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span class="user-dropdown__icon">
+                        <img src="./static/assets/svgs/eva_car-outline.svg" alt="Suret Cargo">
+                      </span>
+                      <span>Kuryer sifarişi</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span class="user-dropdown__icon">
+                        <img src="./static/assets/svgs/questions.svg" alt="Suret Cargo">
+                      </span>
+                      <span>Sorğular</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span class="user-dropdown__icon">
+                        <img src="./static/assets/svgs/ic_outline-fact-check.svg" alt="Suret Cargo">
+                      </span>
+                      <span>Etibarnamələr</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <span class="user-dropdown__icon">
+                        <img src="./static/assets/svgs/log-out.svg" alt="Suret Cargo">
+                      </span>
+                      <span>Çıxış</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="auth-side">
             <a href="https://" class="g-btn g-btn__sm g-btn__red btn-login">Daxil ol</a>
             <a href="https://" class="g-btn g-btn__sm g-btn__red--outline">Qeydiyyat</a>
-          </div>
+          </div> -->
           <div class="g-dropdown language-dropdown">
             <button class="g-btn g-fade-relative" id="languagedropdown" aria-expanded="false" aria-haspopup="true"
               data-bs-toggle="dropdown">
               <img class="g-fluid" src="./static/assets/svgs/language.svg" alt="Surat Cargo" />
             </button>
             <div class="dropdown-menu" aria-labelledby="languagedropdown">
-              <a href="">Az</a>
+              <ul class="dropdown-menu__list">
+                <li>
+                  <a class="active" href="">Az</a>
+                </li>
+                <li>
+                  <a href="">Ru</a>
+                </li>
+                <li>
+                  <a href="">En</a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -53,7 +161,7 @@
     <div class="g-container">
       <div class="g-nav__bottom">
         <div class="g-flex">
-          <div class="">
+          <div class="flex-shrink-0">
             <a class="navbar-brand">
               <img class="g-fluid" src="./static/assets/svgs/logo.svg" alt="Surat Cargo">
             </a>
@@ -460,6 +568,22 @@
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+      <div class="g-footer__bottom">
+        <p class="copyright">
+          Suret Kargo 2021
+        </p>
+        <div class="download-app">
+          <p class="download-app-text">
+            Mobil tətbiq yükləyin
+          </p>
+          <a href="">
+            <i class="fab fa-google-play"></i>
+          </a>
+          <a href="">
+            <i class="fab fa-apple"></i>
+          </a>
         </div>
       </div>
     </div>

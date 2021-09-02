@@ -1,6 +1,8 @@
 .g-nav {
   .navbar-brand {
+    display: inline-block;
     cursor: pointer;
+    width: rem(220);
   }
 
   &__top {
@@ -17,11 +19,12 @@
   }
 
   .btn-login {
-    @include advancedRem(margin, (0 24 0 110));
+    @include advancedRem(margin-right, 24);
   }
 
   .address-info {
     @include align-center();
+    margin-right: rem(110);
 
     * {
       color: $dark-gray;
@@ -51,6 +54,20 @@
         @include toRem(width, 2);
       }
     }
+  }
+
+  .authenticated {
+    @include flexbox();
+    align-items: center;
+    margin-left: auto;
+  }
+
+  .online-queues {
+    color: $dark-gray;
+    border-radius: rem(30);
+    border: 1px solid $blue-clr;
+    @include font-size(15, 500);
+    margin-right: rem(50);
   }
 
   .auth-side {
