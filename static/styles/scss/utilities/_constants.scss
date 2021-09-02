@@ -2,6 +2,11 @@
   @include visually-hidden();
 }
 
+.disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .g-fade-relative {
   position: relative;
 }

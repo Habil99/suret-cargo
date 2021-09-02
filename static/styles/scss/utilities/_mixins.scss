@@ -68,12 +68,17 @@
   flex-direction: $dir;
 }
 
-@mixin grid-repeated-cols($size, $gap) {
+@mixin grid-repeated-cols($size: 0, $gap: 0, $type: "minmax", $count: 0) {
   $size: rem($size);
   $gap: rem(20);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax($size, 1fr));
   grid-gap: $gap;
+
+  @if $type == "minmax" {
+    grid-template-columns: repeat(auto-fill, minmax($size, 1fr));
+  } @else if ($type == "fr") {
+    grid-template-columns: repeat($count, 1fr);
+  }
 }
 
 @mixin align-center($dir: row, $wrap: nowrap) {
@@ -207,6 +212,9 @@
 }
 
 @mixin border-slide($fromColor, $color) {
+  position: relative;
+  z-index: 1;
+
   @include pseudo((after, before)) {
     border: 2px solid transparent;
     width: 0;
@@ -223,7 +231,7 @@
     bottom: 0;
     right: 0;
   }
-  
+
   &:hover::before,
   &:hover::after {
     width: 100%;
@@ -231,20 +239,15 @@
   }
 
   &:hover::before {
-    border-top-color: $fromColor; 
+    border-top-color: $fromColor;
     border-right-color: $fromColor;
-    transition:
-      width 0.25s ease-out, 
-      height 0.25s ease-out 0.25s; 
+    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
   }
 
   &:hover::after {
-    border-bottom-color: $fromColor; 
+    border-bottom-color: $fromColor;
     border-left-color: $fromColor;
-    transition:
-      border-color 0s ease-out 0.5s,
-      width 0.25s ease-out 0.5s,
-      height 0.25s ease-out 0.75s;
+    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
   }
 
   &::after {

@@ -1,15 +1,13 @@
 .service-cards {
-  @include grid-repeated-cols(350, 20);
+  @include grid-repeated-cols(0, 20, "fr", 3);
   margin-top: rem(80);
 
   .service-card {
-    position: relative;
     background-color: $light-blue;
     @include advancedRem(padding, (65 70 50));
     @include flex-center(column);
     text-align: center;
     border: 2px solid transparent;
-    z-index: 1;
 
     @include pseudo((after, before)) {
       width: 100%;
@@ -31,6 +29,106 @@
     &__description {
       margin-bottom: rem(40);
       font-weight: 300;
+    }
+  }
+}
+
+.news-cards {
+  @include grid-repeated-cols(0, 26, "fr", 3);
+
+  .news-card {
+    border: rem(1) solid $dark-blue;
+    border-radius: rem(10);
+    @include advancedRem(padding, (13));
+    @include transition();
+    @include border-slide($dark-blue, $red-clr);
+
+    @include pseudo((after, before)) {
+      border-radius: rem(10);
+    }
+
+    @include action-css() {
+      background-color: $white-clr;
+      border-color: transparent;
+
+      .news-card {
+        &__date {
+          color: $red-clr;
+        }
+
+        &__title {
+          color: $dark-blue;
+        }
+
+        &__body {
+          background-color: $white-clr;
+        }
+      }
+    }
+
+    &__body {
+      @include advancedRem(padding, (90 26 30));
+      background-color: $solid-white;
+      border-radius: rem(10);
+    }
+
+    &__img {
+      max-width: rem(250);
+      width: 100%;
+      margin: 0 auto rem(78);
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    &__title {
+      @extend .g-text__md;
+      color: $red-clr;
+      padding-right: rem(25);
+    }
+
+    &__footer {
+      @include justify-between();
+      @include advancedRem(padding, (21 37 11));
+    }
+
+    &__date {
+      color: $dark-blue;
+      @include font-size(16, 400);
+      margin-bottom: 0;
+    }
+  }
+}
+
+.statistics-cards {
+  @include grid-repeated-cols(0, 24, "fr", 4);
+
+  .statistics-card {
+    @include flex-center(column);
+    text-align: center;
+    color: $blue-clr;
+
+    &__img {
+      @include box(127);
+      background-color: $red-clr;
+      border-radius: 50%;
+      @include flex-center();
+
+      img {
+        object-fit: contain;
+      }
+    }
+
+    &__result {
+      @include font-size(44, 600);
+      line-height: rem(102);
+    }
+
+    &__branch {
+      @include font-size(16, 600);
+      line-height: 1.5;
+      text-transform: uppercase;
     }
   }
 }

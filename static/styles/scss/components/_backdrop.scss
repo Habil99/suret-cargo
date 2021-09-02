@@ -9,7 +9,7 @@
 
   @include pseudo(after) {
     width: 50%;
-    height: 300%;
+    height: 320%;
     max-height: $max;
     top: $pos;
     left: $pos;
@@ -20,7 +20,7 @@
 
   @include pseudo(before) {
     width: 55%;
-    height: 300%;
+    height: 320%;
     max-height: rem(800);
     top: rem(-150);
     right: rem(-150);

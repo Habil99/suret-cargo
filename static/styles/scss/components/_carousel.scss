@@ -1,0 +1,7 @@
+.swiper-overflow {
+  overflow: hidden;
+}
+
+.swiper-button-disabled {
+  @extend .disabled;
+}

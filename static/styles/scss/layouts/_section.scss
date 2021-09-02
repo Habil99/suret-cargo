@@ -1,0 +1,14 @@
+.g-section {
+  &__heading {
+    @include toRem(max-width, 700);
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    @include font-size(20, 400);
+    @include toRem(line-height, 38);
+  }
+}

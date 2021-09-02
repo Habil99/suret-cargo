@@ -1,0 +1,93 @@
+/* Footer */
+
+.g-footer {
+  background-color: $azure-clr;
+  @include advancedRem(padding, (80 0 32));
+
+  &__grid {
+    display: flex;
+  }
+
+  &__logo {
+    flex-shrink: 0;
+
+    img {
+      width: rem(252);
+    }
+  }
+
+  &__links {
+    margin-left: rem(145);
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, rem(200)) 1fr;
+    grid-gap: rem(20);
+
+    &--list {
+      list-style: none;
+    }
+
+    &--item {
+      a {
+        color: $gray-clr-2;
+        display: block;
+        padding: rem(12) 0;
+        @include transition();
+
+        &:hover,
+        &.active {
+          color: $red-clr;
+        }
+      }
+    }
+
+    &--info {
+      color: $gray-clr-2;
+      margin-top: rem(12);
+      @include font-size(16, 400);
+
+      a {
+        @include transition();
+
+        &:hover {
+          color: $red-clr;
+        }
+      }
+    }
+
+    &--email {
+      color: $gray-clr-2;
+      @include font-size(16, 400);
+      display: inline-block;
+      margin-bottom: rem(53);
+    }
+
+    &--phone {
+      margin: rem(24) 0;
+
+      a {
+        color: $gray-clr-2;
+
+        &:first-child {
+          margin-right: rem(60);
+        }
+      }
+    }
+  }
+
+  &__social-accounts {
+    @include flex-center();
+    justify-content: flex-start;
+    padding-left: 0;
+    list-style: none;
+
+    a {
+      display: block;
+      margin-right: rem(21);
+      @include font-size(22, 400);
+      color: $blue-clr;
+      
+      @include advancedRem(padding, (5 8));
+    }
+  }
+}
