@@ -8,12 +8,10 @@
   /* in browser which use webkit performance decrease beacuse filter blur. that`s why I have used these properties below */
   /* in addition to that, filter uses hight CPU :(, mainly in elements which have higher dimensions */
 
-  position: relative;
-
   @include pseudo(before) {
     width: 60%;
-    height: 350%;
-    max-height: $max;
+    height: 150%;
+    // max-height: $max;
     top: $pos;
     left: $pos;
     filter: blur(#{$blur});
@@ -23,8 +21,8 @@
 
   @include pseudo(after) {
     width: 64%;
-    height: 350%;
-    max-height: rem(800);
+    height: 150%;
+    // max-height: $max;
     top: rem(-150);
     right: rem(-150);
     filter: blur(#{$blur});

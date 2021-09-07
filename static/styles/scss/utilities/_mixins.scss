@@ -167,6 +167,8 @@
   )
 ) {
   @each $ps in $pseudos {
+    position: relative;
+
     &:#{$ps} {
       content: "";
       position: absolute;
@@ -218,7 +220,6 @@
 }
 
 @mixin border-slide($fromColor, $color) {
-  position: relative;
   z-index: 1;
 
   @include pseudo((after, before)) {

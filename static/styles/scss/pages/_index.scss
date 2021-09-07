@@ -2,7 +2,6 @@
 
 .intro-section {
   $pseudo-width: rem(410);
-  position: relative;
   background-color: $light-blue;
   @include advancedRem(padding, (83 0));
 

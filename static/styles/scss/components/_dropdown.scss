@@ -23,7 +23,7 @@
         color: $blue-clr;
         @include font-size(14, 400);
         @include transition();
-        
+
         @include action-css((hover, active)) {
           color: $red-clr;
           background-color: transparentize($red-clr, 0.95);
@@ -48,7 +48,7 @@
     &__icon {
       width: rem(35);
       margin-right: rem(15);
-      @include flex-center(); 
+      @include flex-center();
     }
   }
 
@@ -72,7 +72,7 @@
         align-items: center;
         width: 100%;
         @include advancedRem(padding, (7 30));
-        color: #4F4F4F;
+        color: #4f4f4f;
 
         img {
           object-fit: contain;
@@ -88,7 +88,6 @@
 }
 
 /* User Dropdown */
-
 
 .g-dropdown {
   position: relative;
@@ -107,13 +106,12 @@
   display: block;
   @include show-hidden();
   width: max-content;
-  animation: fade-in .2s linear forwards;
+  animation: fade-in 0.2s linear forwards;
 }
 
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateZ(25px) !important;
   }
   to {
     opacity: 1;

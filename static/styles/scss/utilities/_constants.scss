@@ -52,3 +52,7 @@
   color: $dark-gray;
   @include font-size(16, 400);
 }
+
+.border-gray {
+  border-color: $border-clr !important;
+}

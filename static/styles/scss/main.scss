@@ -28,6 +28,10 @@
 
 @import "components/carousel";
 
+@import "components/tab";
+
+@import "components/map";
+
 /* Layouts */
 
 @import "layouts/container";
@@ -53,3 +57,5 @@
 @import "pages/update-password";
 
 @import "pages/_success";
+
+@import "pages/contact";

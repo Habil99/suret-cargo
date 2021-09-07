@@ -1,0 +1,52 @@
+/* Tab */
+
+.g-tab-swiper {
+  overflow: hidden;
+}
+
+.g-tab-bordered {
+  .swiper-slide {
+    width: max-content;
+  }
+
+  &__item {
+    @include font-size(16, 400);
+    color: $dark-gray;
+    text-align: center;
+    white-space: nowrap;
+    @include transition();
+    display: block;
+
+    span {
+      @include advancedRem(padding, (0 6 8 6));
+      display: inline-block;
+    }
+
+    &:hover {
+      color: $blue-clr;
+
+      @include pseudo() {
+        background: $blue-gradient;
+      }
+    }
+
+    @include pseudo() {
+      bottom: 0;
+      width: 100%;
+      height: rem(5);
+      background-color: $border-clr;
+      border-radius: rem(2);
+    }
+
+    &.active {
+      font-weight: 600;
+      color: $dark-gray;
+
+      @include pseudo() {
+        background: $blue-gradient;
+      }
+    }
+  }
+}
+
+/* Tab */
