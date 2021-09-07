@@ -18,10 +18,17 @@ $red-gradient: linear-gradient(263.14deg, #f31802 -20.94%, #f59288 114.79%);
 $solid-blue-border: #03006c99;
 $light-blue: #f8f7fe;
 $dark-blue: #0C1F6B;
+$dark-blue-2: #2D2B81;
 $solid-white: #F4F6FF;
 $gray-clr: #5B5B5D;
 $azure-clr: #EEF0F2;
 $gray-clr-2: #535355;
+$label-clr: #828282;
+$border-clr-2: #353299;
+$container-bg: #ffffff4d;
+
+$offset: 100;
+$offset-md: 320;
 
 $break-points: (
   "sm": rem(480),

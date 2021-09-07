@@ -105,9 +105,8 @@
 .dropdown-menu.show {
   position: absolute;
   display: block;
-  clip-path: none;
-  clip: auto;
   @include show-hidden();
+  width: max-content;
   animation: fade-in .2s linear forwards;
 }
 

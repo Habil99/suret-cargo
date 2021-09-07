@@ -1,0 +1,23 @@
+.login-section {
+  @include advancedRem(margin, (80 0 100));
+
+  &__title {
+    margin-bottom: rem(22);
+  }
+
+  .forgot-password-link {
+    @include font-size(16, 300, italic);
+    margin-bottom: rem(17);
+    color: $dark-blue-2;
+  }
+
+  .register-suggestion {
+    @include flex-center();
+    margin-top: rem(58);
+    @include font-size(16, 400);
+
+    a {
+      color: $red-clr;
+    }
+  }
+}

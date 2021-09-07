@@ -13,7 +13,7 @@
 
   <title>Surat Cargo</title>
   <link rel="shortcut icon" href="./static/assets/svgs/logo.svg" type="image/x-icon">
-  <link rel="stylesheet" href="static/styles/css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="static/styles/css/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="./static/styles/css/swiper/swiper.min.css">
   <link rel="stylesheet" href="static/styles/css/main.css" />
 
@@ -25,170 +25,172 @@
 <body>
 
   <!--------------------------- Navbar --------------------------->
-  <nav class="g-nav g-backdrop g-backdrop__ltr">
-    <div class="g-nav__border">
-      <div class="g-container">
-        <div class="g-nav__top">
-          <div class="address-info">
-            <address class="border-right">Masazır qəsəbəsi, Əliağa Vahid küçəsi</address>
-            <a class="border-right" href="tel:+">*4466</a>
-            <a href="mailto:hello@suretkargo.az">hello@suretkargo.az</a>
-          </div>
-          <div class="authenticated">
-            <a href="https://" class="g-btn g-btn__sm online-queues">
-              <img src="./static/assets/svgs/user-group.svg" alt="Suret Cargo">
-              <span>
-                Online növbə
-              </span>
-            </a>
-            <div class="user-dropdown">
-              <button class="g-btn g-fade-relative" id="userDropdown" aria-expanded="false" aria-haspopup="true"
+  <nav class="g-nav">
+    <div class="g-backdrop g-backdrop__ltr">
+      <div class="g-nav__border">
+        <div class="g-container">
+          <div class="g-nav__top">
+            <div class="address-info">
+              <address class="border-right">Masazır qəsəbəsi, Əliağa Vahid küçəsi</address>
+              <a class="border-right" href="tel:+">*4466</a>
+              <a href="mailto:hello@suretkargo.az">hello@suretkargo.az</a>
+            </div>
+            <div class="authenticated">
+              <a href="https://" class="g-btn g-btn__sm online-queues">
+                <img src="./static/assets/svgs/user-group.svg" alt="Suret Cargo">
+                <span>
+                  Online növbə
+                </span>
+              </a>
+              <div class="g-dropdown user-dropdown">
+                <button class="g-btn g-fade-relative" id="userDropdown" aria-expanded="false" aria-haspopup="true"
+                  data-bs-toggle="dropdown">
+                  Nigar Musazade | 10001
+                </button>
+                <div class="dropdown-menu" aria-labelledby="userDropdown">
+                  <ul class="dropdown-menu__list">
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/map-mark.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Xaricdəki ünvanlarım</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/package.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Bağlamalar</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/cart.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Sifarişlərim</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/coins.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Balans</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/la_coins.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Bonus Balans</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/ri_user-settings-line.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Tənzimləmələr</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/eva_car-outline.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Kuryer sifarişi</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/questions.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Sorğular</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/ic_outline-fact-check.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Etibarnamələr</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/log-out.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Çıxış</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="auth-side">
+              <a href="https://" class="g-btn g-btn__sm g-btn__red btn-login">Daxil ol</a>
+              <a href="https://" class="g-btn g-btn__sm g-btn__red--outline">Qeydiyyat</a>
+            </div> -->
+            <div class="g-dropdown language-dropdown">
+              <button class="g-btn g-fade-relative" id="languagedropdown" aria-expanded="false" aria-haspopup="true"
                 data-bs-toggle="dropdown">
-                Nigar Musazade | 10001
+                <img class="g-fluid" src="./static/assets/svgs/language.svg" alt="Surat Cargo" />
               </button>
-              <div class="g-dropdown dropdown-menu" aria-labelledby="userDropdown">
+              <div class="dropdown-menu" aria-labelledby="languagedropdown">
                 <ul class="dropdown-menu__list">
                   <li>
-                    <a href="">
-                      <span class="user-dropdown__icon">
-                        <img src="./static/assets/svgs/map-mark.svg" alt="Suret Cargo">
-                      </span>
-                      <span>Xaricdəki ünvanlarım</span>
-                    </a>
+                    <a class="active" href="">Az</a>
                   </li>
                   <li>
-                    <a href="">
-                      <span class="user-dropdown__icon">
-                        <img src="./static/assets/svgs/package.svg" alt="Suret Cargo">
-                      </span>
-                      <span>Bağlamalar</span>
-                    </a>
+                    <a href="">Ru</a>
                   </li>
                   <li>
-                    <a href="">
-                      <span class="user-dropdown__icon">
-                        <img src="./static/assets/svgs/cart.svg" alt="Suret Cargo">
-                      </span>
-                      <span>Sifarişlərim</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      <span class="user-dropdown__icon">
-                        <img src="./static/assets/svgs/coins.svg" alt="Suret Cargo">
-                      </span>
-                      <span>Balans</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      <span class="user-dropdown__icon">
-                        <img src="./static/assets/svgs/la_coins.svg" alt="Suret Cargo">
-                      </span>
-                      <span>Bonus Balans</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      <span class="user-dropdown__icon">
-                        <img src="./static/assets/svgs/ri_user-settings-line.svg" alt="Suret Cargo">
-                      </span>
-                      <span>Tənzimləmələr</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      <span class="user-dropdown__icon">
-                        <img src="./static/assets/svgs/eva_car-outline.svg" alt="Suret Cargo">
-                      </span>
-                      <span>Kuryer sifarişi</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      <span class="user-dropdown__icon">
-                        <img src="./static/assets/svgs/questions.svg" alt="Suret Cargo">
-                      </span>
-                      <span>Sorğular</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      <span class="user-dropdown__icon">
-                        <img src="./static/assets/svgs/ic_outline-fact-check.svg" alt="Suret Cargo">
-                      </span>
-                      <span>Etibarnamələr</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="">
-                      <span class="user-dropdown__icon">
-                        <img src="./static/assets/svgs/log-out.svg" alt="Suret Cargo">
-                      </span>
-                      <span>Çıxış</span>
-                    </a>
+                    <a href="">En</a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <!-- <div class="auth-side">
-            <a href="https://" class="g-btn g-btn__sm g-btn__red btn-login">Daxil ol</a>
-            <a href="https://" class="g-btn g-btn__sm g-btn__red--outline">Qeydiyyat</a>
-          </div> -->
-          <div class="g-dropdown language-dropdown">
-            <button class="g-btn g-fade-relative" id="languagedropdown" aria-expanded="false" aria-haspopup="true"
-              data-bs-toggle="dropdown">
-              <img class="g-fluid" src="./static/assets/svgs/language.svg" alt="Surat Cargo" />
-            </button>
-            <div class="dropdown-menu" aria-labelledby="languagedropdown">
-              <ul class="dropdown-menu__list">
-                <li>
-                  <a class="active" href="">Az</a>
-                </li>
-                <li>
-                  <a href="">Ru</a>
-                </li>
-                <li>
-                  <a href="">En</a>
-                </li>
-              </ul>
-            </div>
-          </div>
         </div>
       </div>
-    </div>
-    <div class="g-container">
-      <div class="g-nav__bottom">
-        <div class="g-flex">
-          <div class="flex-shrink-0">
-            <a class="navbar-brand">
-              <img class="g-fluid" src="./static/assets/svgs/logo.svg" alt="Surat Cargo">
-            </a>
-          </div>
-          <div class="g-flex__shrink-0 g-flex__grow">
-            <div class="g-nav__links">
-              <ul class="g-nav__link-list">
-                <li class="g-nav__link">
-                  <a href="https://">Ana səhifə</a>
-                </li>
-                <li class="g-nav__link">
-                  <a href="https://">Haqqımızda</a>
-                </li>
-                <li class="g-nav__link">
-                  <a href="https://">Xidmətlər</a>
-                </li>
-                <li class="g-nav__link">
-                  <a href="https://">Tez-tez verilən suallar</a>
-                </li>
-                <li class="g-nav__link">
-                  <a href="https://">Əlaqə</a>
-                </li>
-              </ul>
+      <div class="g-container">
+        <div class="g-nav__bottom">
+          <div class="g-flex">
+            <div class="flex-shrink-0">
+              <a class="navbar-brand">
+                <img class="g-fluid" src="./static/assets/svgs/logo.svg" alt="Surat Cargo">
+              </a>
             </div>
-          </div>
-          <div class="">
-            <a class="g-btn g-btn__blue g-btn__md" href="https://">Sifariş et</a>
+            <div class="g-flex__shrink-0 g-flex__grow">
+              <div class="g-nav__links">
+                <ul class="g-nav__link-list">
+                  <li class="g-nav__link">
+                    <a href="https://">Ana səhifə</a>
+                  </li>
+                  <li class="g-nav__link">
+                    <a href="https://">Haqqımızda</a>
+                  </li>
+                  <li class="g-nav__link">
+                    <a href="https://">Xidmətlər</a>
+                  </li>
+                  <li class="g-nav__link">
+                    <a href="https://">Tez-tez verilən suallar</a>
+                  </li>
+                  <li class="g-nav__link">
+                    <a href="https://">Əlaqə</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="">
+              <a class="g-btn g-btn__blue g-btn__md" href="https://">Sifariş et</a>
+            </div>
           </div>
         </div>
       </div>

@@ -40,6 +40,16 @@
 
 @import "layouts/footer";
 
+@import "layouts/form";
+
 /* Pages */
 
 @import "pages/index";
+
+@import "pages/register";
+
+@import "pages/login";
+
+@import "pages/update-password";
+
+@import "pages/_success";

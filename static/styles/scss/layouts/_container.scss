@@ -1,6 +1,11 @@
 .g-container {
-  $offset: rem(100);
   width: 100%;
   margin: 0 auto;
-  max-width: calc(100% - #{$offset} * 2);
+  max-width: calc(100% - #{rem($offset)} * 2);
+}
+
+.g-container__md {
+  width: 100%;
+  margin: 0 auto;
+  max-width: calc(100% - #{rem($offset-md)} * 2);
 }

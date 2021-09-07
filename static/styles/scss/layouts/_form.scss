@@ -1,0 +1,117 @@
+.g-form {
+  &__grid {
+    &.two-cols {
+      @include grid-repeated-cols(0, 30, "fr", 2);
+      grid-row-gap: rem(32);
+    }
+
+    &.one-col {
+      @include grid-repeated-cols(0, 22, "fr", 1);
+    }
+  }
+
+  &__btn {
+    @include flex-center(column);
+    margin-top: rem(17);
+  }
+
+  .g-form-group {
+    @include flexbox(column);
+    position: relative;
+  }
+
+  .g-label {
+    position: absolute;
+    left: rem(33);
+    top: rem(-8);
+    background: transparent;
+    color: $dark-gray;
+    @include font-size(18, 300);
+    z-index: 1;
+  }
+
+  .g-input {
+    border: rem(3) solid $white-clr;
+    border-radius: rem(30);
+    background-color: transparent;
+    @include advancedRem(padding, (15 33));
+    // color: $label-clr;
+    color: $dark-gray;
+    @include font-size(16, 400);
+  }
+
+  &__container {
+    background: $container-bg;
+    backdrop-filter: blur(4px);
+    border-radius: rem(5);
+    @include advancedRem(padding, (55 100 90));
+
+    &--md {
+      @include advancedRem(padding, (43 105));
+    }
+  }
+
+  &__title {
+    text-align: center;
+    line-height: rem(57);
+  }
+}
+
+/* Label */
+.g-checkbox {
+  $checkbox-w: 18;
+
+  @extend .g-text__sm;
+
+  input[type="checkbox"] {
+    &:checked {
+      + .g-checkbox__label {
+        @include pseudo(after) {
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+  &__label {
+    padding-left: rem(32);
+    position: relative;
+    cursor: pointer;
+    @include transition();
+
+    &:hover {
+      @include pseudo(after) {
+        opacity: 0.6;
+        visibility: visible;
+      }
+    }
+
+    @include pseudo((after, before)) {
+      top: 50%;
+      transform: translateY(-50%);
+      @include transition();
+    }
+
+    @include pseudo() {
+      left: 0;
+      @include box($checkbox-w);
+      border: rem(2) solid $border-clr-2;
+      border-radius: rem(4.5);
+    }
+
+    @include pseudo(after) {
+      left: calc((#{rem($checkbox-w)} / 2) - #{rem(4)});
+      background-image: url("../../assets/svgs/checkmark.svg");
+      width: rem(8);
+      height: rem(7);
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    a {
+      color: $blue-clr;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.register-section {
+  margin: rem(100) 0;
+
+  .register-form {
+    margin-top: rem(44);
+
+    &__checkbox {
+      @include advancedRem(margin, (15 0 0 25));
+    }
+  }
+}

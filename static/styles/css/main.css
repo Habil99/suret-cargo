@@ -38,7 +38,7 @@
   font-style: normal;
 }
 
-.g-text__sm {
+.g-text__sm, .g-checkbox {
   font-size: 1.125rem;
   font-weight: 400;
   font-style: normal;
@@ -77,6 +77,7 @@
   font-weight: 700;
   font-style: normal;
   src: url("../../assets/fonts/Prompt-Bold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -84,6 +85,7 @@
   font-weight: 400;
   font-style: normal;
   src: url("../../assets/fonts/Prompt-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -91,6 +93,7 @@
   font-weight: 600;
   font-style: normal;
   src: url("../../assets/fonts/Prompt-SemiBold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -98,6 +101,7 @@
   font-weight: 900;
   font-style: normal;
   src: url("../../assets/fonts/Prompt-ExtraBold.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -105,6 +109,7 @@
   font-weight: 500;
   font-style: normal;
   src: url("../../assets/fonts/Prompt-Medium.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -112,6 +117,7 @@
   font-weight: 300;
   font-style: normal;
   src: url("../../assets/fonts/Prompt-Light.ttf") format("truetype");
+  font-display: swap;
 }
 
 *,
@@ -147,7 +153,8 @@ html {
 
 body {
   font-family: "Prompt", sans-serif !important;
-  background: #fff;
+  background-color: #fff;
+  /* if you prefer to performance, you should choose this way */
   color: #2f2f30;
 }
 
@@ -166,6 +173,16 @@ body {
 .btn:focus,
 .form-control:focus {
   text-shadow: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 ul {
@@ -331,15 +348,16 @@ a {
 .dropdown-menu.show {
   position: absolute;
   display: block;
-  -webkit-clip-path: none;
-          clip-path: none;
-  clip: auto;
   clip: auto;
   height: auto;
   position: absolute;
-  clip-path: none;
+  -webkit-clip-path: none;
+          clip-path: none;
   white-space: normal;
   width: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   -webkit-animation: fade-in .2s linear forwards;
           animation: fade-in .2s linear forwards;
 }
@@ -376,6 +394,7 @@ a {
   transition: all 0.2s linear;
   position: relative;
   border-radius: 1.625rem;
+  text-align: center;
 }
 
 .g-btn__sm {
@@ -384,6 +403,7 @@ a {
   font-size: 1rem;
   font-weight: 500;
   font-style: normal;
+  line-height: 1.5rem;
 }
 
 .g-btn__md {
@@ -393,9 +413,16 @@ a {
   font-style: normal;
 }
 
+.g-btn__lg {
+  padding: 1.0625rem 5.5rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .g-btn__blue {
   background: linear-gradient(269.65deg, #03006c -43.69%, #aba9f7 183.89%);
-  color: #fff;
+  color: #fff !important;
 }
 
 .g-btn__red {
@@ -418,14 +445,16 @@ a {
 }
 
 .g-backdrop {
+  /* in browser which use webkit performance decrease beacuse filter blur. that`s why I have used these properties below */
+  /* in addition to that, filter uses hight CPU :(, mainly in elements which have higher dimensions */
   position: relative;
 }
 
-.g-backdrop:after {
+.g-backdrop:before {
   content: "";
   position: absolute;
-  width: 50%;
-  height: 320%;
+  width: 60%;
+  height: 350%;
   max-height: 50rem;
   top: -9.375rem;
   left: -9.375rem;
@@ -436,11 +465,11 @@ a {
           transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.g-backdrop:before {
+.g-backdrop:after {
   content: "";
   position: absolute;
-  width: 55%;
-  height: 320%;
+  width: 64%;
+  height: 350%;
   max-height: 50rem;
   top: -9.375rem;
   right: -9.375rem;
@@ -451,25 +480,25 @@ a {
           transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 
-.g-backdrop__ltr:after {
+.g-backdrop__ltr:before {
   content: "";
   position: absolute;
   background: rgba(120, 145, 247, 0.2);
 }
 
-.g-backdrop__ltr:before {
-  content: "";
-  position: absolute;
-  background: rgba(255, 143, 133, 0.2);
-}
-
-.g-backdrop__rtl:after {
+.g-backdrop__ltr:after {
   content: "";
   position: absolute;
   background: rgba(255, 143, 133, 0.2);
 }
 
 .g-backdrop__rtl:before {
+  content: "";
+  position: absolute;
+  background: rgba(255, 143, 133, 0.2);
+}
+
+.g-backdrop__rtl:after {
   content: "";
   position: absolute;
   background: rgba(120, 145, 247, 0.2);
@@ -841,6 +870,12 @@ a {
   width: 100%;
   margin: 0 auto;
   max-width: calc(100% - 6.25rem * 2);
+}
+
+.g-container__md {
+  width: 100%;
+  margin: 0 auto;
+  max-width: calc(100% - 20rem * 2);
 }
 
 .g-flex {
@@ -1268,6 +1303,163 @@ a {
   margin-right: 1.3125rem;
 }
 
+.g-form__grid.two-cols {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.25rem;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 2rem;
+}
+
+.g-form__grid.one-col {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.25rem;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
+.g-form__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 1.0625rem;
+}
+
+.g-form .g-form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.g-form .g-label {
+  position: absolute;
+  left: 2.0625rem;
+  top: -0.5rem;
+  background: transparent;
+  color: #2f2f30;
+  font-size: 1.125rem;
+  font-weight: 300;
+  font-style: normal;
+  z-index: 1;
+}
+
+.g-form .g-input {
+  border: 0.1875rem solid #fff;
+  border-radius: 1.875rem;
+  background-color: transparent;
+  padding: 0.9375rem 2.0625rem;
+  color: #2f2f30;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.g-form__container {
+  background: #ffffff4d;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 0.3125rem;
+  padding: 3.4375rem 6.25rem 5.625rem;
+}
+
+.g-form__container--md {
+  padding: 2.6875rem 6.5625rem;
+}
+
+.g-form__title {
+  text-align: center;
+  line-height: 3.5625rem;
+}
+
+/* Label */
+.g-checkbox input[type="checkbox"]:checked + .g-checkbox__label:after {
+  content: "";
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+}
+
+.g-checkbox__label {
+  padding-left: 2rem;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.g-checkbox__label:hover:after {
+  content: "";
+  position: absolute;
+  opacity: 0.6;
+  visibility: visible;
+}
+
+.g-checkbox__label:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.g-checkbox__label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.g-checkbox__label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 0.125rem solid #353299;
+  border-radius: 0.28125rem;
+}
+
+.g-checkbox__label:after {
+  content: "";
+  position: absolute;
+  left: calc((1.125rem / 2) - 0.25rem);
+  background-image: url("../../assets/svgs/checkmark.svg");
+  width: 0.5rem;
+  height: 0.4375rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.g-checkbox__label a {
+  color: #03006c;
+}
+
 /* Pages */
 /* Introduction */
 .intro-section {
@@ -1489,5 +1681,111 @@ a {
       -ms-flex-pack: center;
           justify-content: center;
   height: 9.375rem;
+}
+
+/* Recover Password */
+.recover-pass-btn {
+  margin: 1.25rem 0 1.875rem;
+}
+
+.register-section {
+  margin: 6.25rem 0;
+}
+
+.register-section .register-form {
+  margin-top: 2.75rem;
+}
+
+.register-section .register-form__checkbox {
+  margin: 0.9375rem 0 0 1.5625rem;
+}
+
+.login-section {
+  margin: 5rem 0 6.25rem;
+}
+
+.login-section__title {
+  margin-bottom: 1.375rem;
+}
+
+.login-section .forgot-password-link {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 1.0625rem;
+  color: #2D2B81;
+}
+
+.login-section .register-suggestion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 3.625rem;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.login-section .register-suggestion a {
+  color: #eb4838;
+}
+
+.password-update__title {
+  margin-bottom: 3.125rem;
+}
+
+.update-password-btn {
+  padding: 1.125rem 6.25rem;
+}
+
+.success-section {
+  margin: 5rem 0 12.5rem;
+}
+
+.success-section__container {
+  padding: 2.6875rem 5rem 4.375rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 0.25rem;
+  background-color: #ffffff4d;
+}
+
+.success-section__title {
+  margin-bottom: 2.8125rem;
+}
+
+.success-section__img {
+  margin-bottom: 3.625rem;
+  max-width: 28.125rem;
+  width: 100%;
+}
+
+.success-section .g-text__sm, .success-section .g-checkbox {
+  font-weight: 300;
 }
 /*# sourceMappingURL=main.css.map */

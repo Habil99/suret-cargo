@@ -30,7 +30,12 @@ html {
 
 body {
   font-family: "Prompt", sans-serif !important;
-  background: $white-clr;
+  background-color: $white-clr;
+  
+  /* if you prefer to performance, you should choose this way */
+
+  // background: rgb(146, 165, 243);
+  // background: linear-gradient(90deg, rgba(177, 191, 248, 0.404) 24%, rgba(253, 188, 183, 0.438) 91%);
   color: $dark-gray;
 }
 
@@ -49,6 +54,16 @@ body {
   }
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 ul {
   padding-left: 0;
   list-style: none;
@@ -65,3 +80,17 @@ a {
 .g-fluid {
   width: 100%;
 }
+
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover,
+// input:-webkit-autofill:focus,
+// textarea:-webkit-autofill,
+// textarea:-webkit-autofill:hover,
+// textarea:-webkit-autofill:focus,
+// select:-webkit-autofill,
+// select:-webkit-autofill:hover,
+// select:-webkit-autofill:focus {
+//   border: rem(3) solid $white-clr !important;
+//   -webkit-text-fill-color: $label-clr;
+//   transition: background-color 5000s ease-in-out 0s;
+// }

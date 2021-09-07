@@ -8,12 +8,14 @@
   @include transition();
   position: relative;
   border-radius: rem(26);
+  text-align: center;
 
   &__sm {
     border-radius: $radius;
 
     padding: rem(8) rem(32);
     @include font-size(16, 500);
+    line-height: rem(24);
   }
 
   &__md {
@@ -21,9 +23,14 @@
     @include font-size(18, 400);
   }
 
+  &__lg {
+    @include advancedRem(padding, (17 88));
+    @include font-size(18, 400);
+  }
+
   &__blue {
     background: $blue-gradient;
-    color: $white-clr;
+    color: $white-clr !important;
   }
 
   &__red {

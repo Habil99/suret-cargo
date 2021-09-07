@@ -5,11 +5,14 @@
   $blue: hsla(228, 89%, 72%, 0.2);
   $pink: hsla(5, 100%, 76%, 0.2);
 
+  /* in browser which use webkit performance decrease beacuse filter blur. that`s why I have used these properties below */
+  /* in addition to that, filter uses hight CPU :(, mainly in elements which have higher dimensions */
+
   position: relative;
 
-  @include pseudo(after) {
-    width: 50%;
-    height: 320%;
+  @include pseudo(before) {
+    width: 60%;
+    height: 350%;
     max-height: $max;
     top: $pos;
     left: $pos;
@@ -18,9 +21,9 @@
     transform: matrix(-1, 0, 0, 1, 0, 0);
   }
 
-  @include pseudo(before) {
-    width: 55%;
-    height: 320%;
+  @include pseudo(after) {
+    width: 64%;
+    height: 350%;
     max-height: rem(800);
     top: rem(-150);
     right: rem(-150);
@@ -34,21 +37,21 @@
   // [rtl] => will be vice versa
 
   &__ltr {
-    @include pseudo(after) {
+    @include pseudo(before) {
       background: $blue;
     }
 
-    @include pseudo(before) {
+    @include pseudo(after) {
       background: $pink;
     }
   }
 
   &__rtl {
-    @include pseudo(after) {
+    @include pseudo(before) {
       background: $pink;
     }
-    
-    @include pseudo(before) {
+
+    @include pseudo(after) {
       background: $blue;
     }
   }
