@@ -1,0 +1,63 @@
+.about-page {
+  @include advancedRem(margin, (50 0 100));
+
+  &__banner {
+    position: relative;
+    margin-bottom: rem(40);
+
+    .banner-img {
+      width: 100%;
+      height: 100%;
+      min-height: rem(650);
+      object-fit: cover;
+    }
+  }
+
+  .about-us-content {
+    position: absolute;
+    @include arrange(110, 130, 80);
+    color: $white-clr;
+    
+    .about-us {
+      @include font-size(16, 300);
+      line-height: 1.7;
+      max-width: rem(430);
+    }
+
+    .about-img {
+      max-width: rem(620);
+      pointer-events: none;
+      min-width: rem(400);
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .about-cards {
+    background-color: $white-clr;
+    @include advancedRem(padding, (80 180));
+    @include grid-repeated-cols(0, 120, "fr", 4);
+
+    .about-card {
+      text-align: center;
+
+      &-img {
+        margin-bottom: rem(25);
+
+        img {
+          max-width: rem(70);
+        }
+      }
+
+      &-info {
+        max-width: rem(130);
+        width: 100%;
+        margin: 0 auto;
+        @include font-size(14, 600);
+        color: $blue-clr;
+      }
+    }
+  }
+}

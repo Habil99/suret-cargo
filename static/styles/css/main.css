@@ -1978,14 +1978,17 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contact-section__info .contact-card-img {
-  margin-right: 0.9375rem;
+  margin-right: 1.5625rem;
 }
 
 .contact-section__info .contact-card-img img {
-  max-width: 3.4375rem;
+  max-width: 2.1875rem;
 }
 
 .contact-section__info .contact-card-label {
@@ -2014,4 +2017,79 @@ a {
 }
 
 /* Contact Page */
+.about-page {
+  margin: 3.125rem 0 6.25rem;
+}
+
+.about-page__banner {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+.about-page__banner .banner-img {
+  width: 100%;
+  height: 100%;
+  min-height: 40.625rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about-page .about-us-content {
+  position: absolute;
+  top: 6.875rem;
+  left: 8.125rem;
+  right: 5rem;
+  bottom: auto/16rem;
+  color: #fff;
+}
+
+.about-page .about-us-content .about-us {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.7;
+  max-width: 26.875rem;
+}
+
+.about-page .about-us-content .about-img {
+  max-width: 38.75rem;
+  pointer-events: none;
+  min-width: 25rem;
+}
+
+.about-page .about-us-content .about-img img {
+  width: 100%;
+}
+
+.about-page .about-cards {
+  background-color: #fff;
+  padding: 5rem 11.25rem;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.25rem;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.about-page .about-cards .about-card {
+  text-align: center;
+}
+
+.about-page .about-cards .about-card-img {
+  margin-bottom: 1.5625rem;
+}
+
+.about-page .about-cards .about-card-img img {
+  max-width: 4.375rem;
+}
+
+.about-page .about-cards .about-card-info {
+  max-width: 8.125rem;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: normal;
+  color: #03006c;
+}
 /*# sourceMappingURL=main.css.map */

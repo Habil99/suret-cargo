@@ -273,3 +273,15 @@
     transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
   }
 }
+
+@mixin arrange($top: auto, $left: auto, $right: auto, $bottom: auto) {
+  $top: rem($top);
+  $left: rem($left);
+  $right: rem($right);
+  $bottom: rem($bottom);
+
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
