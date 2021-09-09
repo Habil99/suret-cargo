@@ -1,0 +1,40 @@
+.sample-sites {
+  @include advancedRem(margin, (80 0 55));
+  @include grid-repeated-cols(0, 30, "fr", 3);
+
+  .sample-site {
+    background-color: #fafafa;
+    @include flex-center();
+    @include advancedRem(padding, (33 50));
+    border-radius: #{rem($radius-20)};
+    min-height: rem(128);
+
+    &-img {
+      img {
+        object-fit: contain;
+        max-width: 100%;
+        
+        @include breakpoint-min(1920) {
+          min-width: rem(110);
+        }
+      }
+    }
+  }
+
+  &-section {
+    @include advancedRem(margin, (95 0 100));
+    background-color: $white-clr;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__wrapper {
+    @include advancedRem(padding, (70 240));
+  }
+
+  &-pagination {
+    @include flex-center();
+  }
+}

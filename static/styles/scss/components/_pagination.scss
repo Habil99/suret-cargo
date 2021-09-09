@@ -1,0 +1,43 @@
+/* Pagination */
+
+.g-pagination {
+  .page-item {
+    &:not(:last-child) {
+      margin-right: rem(5);
+    }
+
+    &.active {
+      .page-link {
+        background: $red-gradient;
+        color: $white-clr;
+      }
+    }
+  }
+
+  .page-link {
+    @include flex-center(column);
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    color: $dark-gray;
+    @include advancedRem(padding, (8 15));
+    @include font-size(18, 400);
+
+    &:hover,
+    &.active {
+      background: transparentize($red-clr, 0.91);
+      color: $red-clr;
+    }
+  }
+
+  .controller {
+    a {
+      @include font-size(14, 400);
+    }
+  }
+}
+
+/* Pagination */

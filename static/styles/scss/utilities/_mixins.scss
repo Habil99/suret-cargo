@@ -214,7 +214,18 @@
 }
 
 @mixin breakpoint($min-width, $max-width) {
+  $min-width: rem($min-width);
+  $max-width: rem($max-width);
+
   @media screen and (min-width: #{$min-width}) and (max-width: #{$max-width}) {
+    @content;
+  }
+}
+
+@mixin  breakpoint-min($min-width) {
+  $min-width: rem($min-width);
+
+  @media screen and (min-width: #{$min-width}) {
     @content;
   }
 }
