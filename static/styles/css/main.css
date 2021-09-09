@@ -2174,6 +2174,7 @@ a {
   padding: 2.0625rem 3.125rem;
   border-radius: 1.25rem;
   min-height: 8rem;
+  position: relative;
 }
 
 .sample-sites .sample-site-img img {
@@ -2217,5 +2218,97 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.services-page {
+  margin: 6.25rem 0;
+  padding: 3.125rem 12.5rem 10.625rem;
+  background-color: #fff;
+}
+
+.services-page__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.services-page__title {
+  text-align: center;
+  margin-bottom: 3.4375rem;
+}
+
+.services-page__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.services-page__content:not(:last-child) {
+  margin-bottom: 8.75rem;
+}
+
+.services-page__content:nth-child(n) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services-page__content:nth-child(n) .services-page-info {
+  margin-left: 4.0625rem;
+}
+
+.services-page__content:nth-child(2n) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.services-page__content:nth-child(2n) .services-page-info {
+  max-width: 35.625rem;
+}
+
+.services-page-subtitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 1.375rem;
+}
+
+.services-page-text {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.5rem;
+}
+
+.services-page-text a {
+  color: #353299;
+}
+
+.services-page__img {
+  max-width: 18.75rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.services-page__img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

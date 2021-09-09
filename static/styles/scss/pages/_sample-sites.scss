@@ -8,6 +8,7 @@
     @include advancedRem(padding, (33 50));
     border-radius: #{rem($radius-20)};
     min-height: rem(128);
+    position: relative;
 
     &-img {
       img {
