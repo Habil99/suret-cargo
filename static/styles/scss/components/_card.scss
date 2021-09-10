@@ -101,6 +101,28 @@
   }
 }
 
+.news-page__cards {
+  margin-top: rem(50);
+  @extend .news-cards;
+
+  @include grid-repeated-cols(0, 20, "fr", 2);
+
+  .news-card {
+    &__img {
+      max-width: rem(180);
+      margin: 0 auto rem(34);
+    }
+
+    &__body {
+      @include advancedRem(padding, (50 26 10));
+    }
+
+    &__title {
+      @include font-size(20, 500);
+    }
+  }
+}
+
 .statistics-cards {
   @include grid-repeated-cols(0, 24, "fr", 4);
 

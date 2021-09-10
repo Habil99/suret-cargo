@@ -1,0 +1,8 @@
+.news-page {
+  margin: rem(100) 0;
+
+  &__wrapper {
+    background-color: $white-clr;
+    @include advancedRem(padding, (60 110 190));
+  }
+}
