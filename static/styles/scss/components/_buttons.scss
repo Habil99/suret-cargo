@@ -10,6 +10,25 @@
   border-radius: rem(26);
   text-align: center;
 
+  &__close {
+    position: absolute;
+    top: rem(20);
+    right: rem(20);
+    padding: rem(4) rem(8);
+    color: $red-clr;
+    
+    i {
+      @include font-size(16, 400);
+    }
+  }
+
+  &__base {
+    @include advancedRem(padding, (13 66));
+    @include font-size(14, 700);
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
   &__sm {
     border-radius: $radius;
 
@@ -31,6 +50,12 @@
   &__blue {
     background: $blue-gradient;
     color: $white-clr !important;
+
+    &--outline {
+      background: transparent;
+      border: 1px solid $blue-clr;
+      color: $blue-clr;
+    }
   }
 
   &__red {

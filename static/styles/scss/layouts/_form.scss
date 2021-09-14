@@ -28,6 +28,10 @@
     color: $dark-gray;
     @include font-size(18, 300);
     z-index: 1;
+
+    &.__white {
+      background-color: $white-clr;
+    }
   }
 
   .g-input {
@@ -38,6 +42,10 @@
     // color: $label-clr;
     color: $dark-gray;
     @include font-size(16, 400);
+
+    &.__gray {
+      border-color: $border-clr;
+    }
   }
 
   &__container {
@@ -113,4 +121,16 @@
       color: $blue-clr;
     }
   }
+}
+
+.g-textarea {
+  @extend .g-input;
+  resize: none;
+  height: rem(60);
+  max-height: rem(180);
+
+  &.__resize {
+    resize: vertical;
+  }
+
 }

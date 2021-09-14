@@ -16,4 +16,60 @@
     background: $blue-gradient;
   }
 
+  .dashboard-bordered-wrapper {
+    margin-top: rem(80);
+    padding-top: rem(25);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .g-btn {
+      @include font-size(16, 600);
+      line-height: rem(24);
+      
+      &:not(:last-child) {
+        margin-bottom: rem(8);
+      }
+    }
+
+    @include pseudo() {
+      max-width: rem(370);
+      height: rem(3);
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: $blue-gradient;
+    }
+  }
+}
+
+.dashboard-form {
+  .g-form-group {
+    margin-bottom: rem(25);
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .total-cost {
+      margin: 0 rem(52) 0 auto;
+      @include font-size(18, 300);
+    }
+
+    .btn-add-link {
+      display: flex;
+      align-items: center;
+      @include font-size(18, 300);
+
+      img {
+        margin-right: rem(7);
+        @include box(20);
+      }
+    }
+  }
 }

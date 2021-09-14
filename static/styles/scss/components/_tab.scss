@@ -62,9 +62,15 @@
     display: block;
     @include font-size(18, 300);
     color: $dark-gray;
+    text-align: center;
     @include advancedRem(padding, (30 50));
     @include advancedRem(border-radius, (20 20 0 0));
     @include transition(all, 0.3s, ease-in-out);
+
+    &__lg {
+      @include font-size(24, 500);
+      line-height: rem(36);
+    }
 
     &:hover,
     &.active {
