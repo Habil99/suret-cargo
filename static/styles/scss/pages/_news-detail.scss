@@ -1,0 +1,71 @@
+.news-detail-section {
+  @include advancedRem(margin, (100 0));
+
+  .news-detail-content {
+    @include advancedRem(padding, (55 100 80));
+    background-color: $white-clr;
+  }
+
+  .news-detail-title {
+    @include font-size(54, 400);
+    line-height: 82px;
+    margin-bottom: rem(20);
+  }
+
+  .news-detail {
+    &__grid {
+      display: grid;
+      grid-template-columns: rem(400) 1fr;
+      grid-column-gap: rem(120);
+    }
+
+    &__img {
+
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: rem(10);
+      }
+    }
+
+    &__heading {
+      @include flexbox();
+    }
+
+    &__date {
+      @include flexbox(column);
+      margin-right: rem(36);
+      padding-right: rem(20);
+
+      @include pseudo() {
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: rem(4);
+        height: 100%;
+        background: $red-gradient;
+      }
+
+      &--day {
+        @include font-size(60, 500);
+        margin-bottom: 0;
+      }
+
+      &--month {
+        @include font-size(14, 400);
+      }
+    }
+
+    &__subtitle {
+      max-width: rem(260);
+      line-height: normal;
+    }
+
+    &__text {
+      @include font-size(18, 300);
+      line-height: rem(27);
+      color: $dark-gray;
+      margin-top: rem(30);
+    }
+  }
+}

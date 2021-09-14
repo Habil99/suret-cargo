@@ -1,0 +1,19 @@
+.faq-section {
+  @include advancedRem(margin, (100 0));
+
+  &__wrapper {
+    overflow: hidden;
+    backdrop-filter: blur(4px) opacity(0.5);
+    background-color: $container-bg;
+
+    @include advancedRem(padding, (55 100 90));
+
+  }
+
+  &__title {
+    @include font-size(54, 400);
+    line-height: rem(82);
+    text-align: center;
+    margin-bottom: rem(32);
+  }
+}

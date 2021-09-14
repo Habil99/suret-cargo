@@ -94,7 +94,7 @@
     @include pseudo() {
       left: 0;
       @include box($checkbox-w);
-      border: rem(2) solid $border-clr-2;
+      border: rem(2) solid $blue-clr-2;
       border-radius: rem(4.5);
     }
 

@@ -49,4 +49,29 @@
   }
 }
 
+.g-tab {
+  .swiper-slide {
+    width: max-content;
+  }
+
+  &__carousel {
+    overflow-x: hidden;
+  }
+
+  &__item {
+    display: block;
+    @include font-size(18, 300);
+    color: $dark-gray;
+    @include advancedRem(padding, (30 50));
+    @include advancedRem(border-radius, (20 20 0 0));
+    @include transition(all, 0.3s, ease-in-out);
+
+    &:hover,
+    &.active {
+      background: $blue-gradient;
+      color: $white-clr;
+    }
+  }
+}
+
 /* Tab */

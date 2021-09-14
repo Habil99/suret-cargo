@@ -1,0 +1,36 @@
+.foreign-addresses {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__card {
+    width: 42%;
+    margin-bottom: rem(26);
+    display: flex;
+
+    @include breakpoint-min(1660) {
+      width: rem(500);
+    }
+
+    /* It will be change when begin responsive design */
+    @include breakpoint(0, 1400) {
+      width: rem(350);
+    }
+
+    &--title {
+      width: rem(150);
+      flex-shrink: 0;
+      @include font-size(18, 400);
+      line-height: rem(27);
+      color: $blue-clr-2;
+    }
+
+    &--info {
+      @include font-size(17, 400);
+      line-height: rem(25);
+      color: $dark-gray;
+      margin-right: 30px;
+      flex-grow: 1;
+    }
+  }
+}

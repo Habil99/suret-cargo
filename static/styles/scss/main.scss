@@ -34,6 +34,10 @@
 
 @import "components/pagination";
 
+@import "components/accordion";
+
+@import "components/popup";
+
 /* Layouts */
 
 @import "layouts/container";
@@ -48,6 +52,7 @@
 
 @import "layouts/form";
 
+@import "layouts/dashboard";
 
 /* Pages */
 
@@ -70,3 +75,9 @@
 @import "pages/services";
 
 @import "pages/news";
+
+@import "pages/news-detail";
+
+@import "pages/faq";
+
+@import "pages/foreign-addresses";

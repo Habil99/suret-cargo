@@ -24,7 +24,7 @@ $gray-clr: #5B5B5D;
 $azure-clr: #EEF0F2;
 $gray-clr-2: #535355;
 $label-clr: #828282;
-$border-clr-2: #353299;
+$blue-clr-2: #353299;
 $container-bg: #ffffff4d;
 
 $offset: 100;
@@ -33,10 +33,14 @@ $offset-md: 320;
 $radius-20: 20;
 
 $break-points: (
-  "sm": rem(480),
-  "md": rem(768),
-  "lg": rem(1200),
+  "sm": 468,
+  "md": 768,
+  "lg": 1024,
 );
+
+$desktop-width: map-get($break-points, "lg");
+$tablet-width: map-get($break-points, "md");
+$mobile-width: map-get($break-points, "sm");
 
 $grid-columns: 12 !default;
 $grid-gutter-width: 12px !default;
