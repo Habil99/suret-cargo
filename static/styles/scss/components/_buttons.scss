@@ -10,13 +10,33 @@
   border-radius: rem(26);
   text-align: center;
 
+  &__paid {
+    @include advancedRem(padding, (5 17));
+    background-color: #e1e5f6;
+    color: $blue-clr-2;
+    @include font-size(16, 400);
+    border-radius: rem(8);
+    border: none;
+    outline: none;
+  }
+
+  &__pay {
+    @include advancedRem(padding, (5 34));
+    background-color: #FBE7EB;
+    color: $red-clr;
+    @include font-size(16, 400);
+    border-radius: rem(8);
+    border: none;
+    outline: none;
+  }
+
   &__close {
     position: absolute;
     top: rem(20);
     right: rem(20);
     padding: rem(4) rem(8);
     color: $red-clr;
-    
+
     i {
       @include font-size(16, 400);
     }

@@ -1,9 +1,9 @@
 const shopsSwiper = document.getElementsByClassName("shops-section__swiper")[0],
   shops_prev = document.getElementById("shops-prev"),
   shops_next = document.getElementById("shops-next"),
-  shopSlides = shopsSwiper.querySelectorAll(".swiper-slide"),
-  shopsSwiper_2 = document.getElementsByClassName("shops-carousel__main")[0],
-  shopsSlides_2 = shopsSwiper_2.querySelectorAll('.swiper-slide');
+  shopSlides = shopsSwiper?.querySelectorAll(".swiper-slide"),
+  shopsSwiper_2 = document?.getElementsByClassName("shops-carousel__main")[0],
+  shopsSlides_2 = shopsSwiper_2?.querySelectorAll('.swiper-slide');
 
 const hasManySlides = slides => {
   if (slides.length > 1) {
@@ -13,7 +13,7 @@ const hasManySlides = slides => {
   }
 };
 
-const shopsCarousel = new Swiper(shopsSwiper, {
+const shopsCarousel = shopsSwiper && new Swiper(shopsSwiper, {
   speed: 1200,
   // loop: hasManySlides(shopSlides),
   navigation: {
@@ -43,7 +43,7 @@ const shopsCarousel = new Swiper(shopsSwiper, {
   }
 })
 
-const shopsMain = new Swiper(shopsSwiper_2, {
+const shopsMain = shopsSwiper_2 && new Swiper(shopsSwiper_2, {
   speed: 2000,
   loop: hasManySlides(shopsSlides_2) ? true : false,
   autoplay: hasManySlides(shopsSlides_2) ? {

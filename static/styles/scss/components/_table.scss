@@ -1,0 +1,44 @@
+.g-table {
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 rem(6);
+    min-width: rem(1100);
+  }
+
+  thead {
+    th {
+      @include font-size(18, 400);
+      border: none;
+      text-align: center;
+      color: $dark-gray;
+    }
+  }
+
+  tbody {
+    tr {
+      background-color: #f8f8fc;
+    }
+
+    tr,
+    td {
+      border-bottom-width: 0 !important;
+      border: none;
+    }
+
+    td {
+      padding: rem(25) 0;
+      text-align: center;
+      @include font-size(16, 400);
+    }
+  }
+}

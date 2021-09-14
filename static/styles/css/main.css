@@ -136,7 +136,6 @@
   margin: 0;
   padding: 0;
   vertical-align: baseline;
-  line-height: 1.1;
   font-family: "Prompt", sans-serif !important;
 }
 
@@ -395,6 +394,30 @@ a {
   position: relative;
   border-radius: 1.625rem;
   text-align: center;
+}
+
+.g-btn__paid {
+  padding: 0.3125rem 1.0625rem;
+  background-color: #e1e5f6;
+  color: #353299;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.g-btn__pay {
+  padding: 0.3125rem 2.125rem;
+  background-color: #FBE7EB;
+  color: #eb4838;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
 }
 
 .g-btn__close {
@@ -1315,6 +1338,51 @@ a {
   margin-right: 1.25rem;
 }
 
+.g-table {
+  width: 100%;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.g-table::-webkit-scrollbar {
+  display: none;
+}
+
+.g-table .table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 0.375rem;
+  min-width: 68.75rem;
+}
+
+.g-table thead th {
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  border: none;
+  text-align: center;
+  color: #2f2f30;
+}
+
+.g-table tbody tr {
+  background-color: #f8f8fc;
+}
+
+.g-table tbody tr,
+.g-table tbody td {
+  border-bottom-width: 0 !important;
+  border: none;
+}
+
+.g-table tbody td {
+  padding: 1.5625rem 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Layouts */
 .g-container {
   width: 100%;
@@ -1807,7 +1875,7 @@ a {
 .g-form .g-label {
   position: absolute;
   left: 2.0625rem;
-  top: -0.5rem;
+  top: -0.75rem;
   background: transparent;
   color: #2f2f30;
   font-size: 1.125rem;
@@ -1950,8 +2018,15 @@ a {
 .g-dashboard {
   position: relative;
   background-color: #fff;
-  padding: 5rem 6.25rem;
   position: relative;
+}
+
+.g-dashboard__pad {
+  padding: 5rem 6.25rem;
+}
+
+.g-dashboard__py {
+  padding: 2.8125rem 0 3.75rem;
 }
 
 .g-dashboard:before {
@@ -2001,6 +2076,14 @@ a {
   top: 0;
   left: 0;
   background: linear-gradient(269.65deg, #03006c -43.69%, #aba9f7 183.89%);
+}
+
+.g-dashboard__tabs__wrapper {
+  padding: 0 2.5rem;
+}
+
+.g-dashboard__tabs__wrapper.on-declarations {
+  margin-bottom: 5.625rem;
 }
 
 .dashboard-form .g-form-group {
