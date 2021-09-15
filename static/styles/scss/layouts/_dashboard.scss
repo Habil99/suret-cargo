@@ -76,6 +76,25 @@
     background-color: $border-clr;
     @include advancedRem(margin, (50 0 10));
   }
+
+  &__bulk-pay {
+    @include flex-center();
+
+    .orders-total {
+      margin-left: rem(35);
+      @include flexbox();
+
+      &__text {
+        @include font-size(16, 400);
+        color: $dark-gray;
+        margin-right: rem(20);
+      }
+
+      &__price {
+        @include font-size(16, 600);
+      }
+    }
+  }
 }
 
 .dashboard-form {

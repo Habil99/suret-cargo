@@ -400,7 +400,7 @@ a {
 .g-btn__paid {
   padding: 0.3125rem 1.0625rem;
   background-color: #e1e5f6;
-  color: #353299;
+  color: #353299 !important;
   font-size: 1rem;
   font-weight: 400;
   font-style: normal;
@@ -411,14 +411,24 @@ a {
 
 .g-btn__pay {
   padding: 0.3125rem 2.125rem;
-  background-color: #FBE7EB;
-  color: #eb4838;
+  background-color: #fbe7eb;
+  color: #eb4838 !important;
   font-size: 1rem;
   font-weight: 400;
   font-style: normal;
   border-radius: 0.5rem;
   border: none;
   outline: none;
+}
+
+.g-btn__mint {
+  background-color: #d9f7f4;
+  color: #72b8ad !important;
+  padding: 0.4375rem 1.125rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .g-btn__close {
@@ -705,7 +715,7 @@ a {
 }
 
 .news-cards .news-card, .news-page__cards .news-card {
-  border: 0.0625rem solid #0C1F6B;
+  border: 0.0625rem solid #0c1f6b;
   border-radius: 0.625rem;
   padding: 0.8125rem;
   -webkit-transition: all 0.2s linear;
@@ -751,15 +761,15 @@ a {
 }
 
 .news-cards .news-card:hover::before, .news-page__cards .news-card:hover::before {
-  border-top-color: #0C1F6B;
-  border-right-color: #0C1F6B;
+  border-top-color: #0c1f6b;
+  border-right-color: #0c1f6b;
   -webkit-transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
   transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
 }
 
 .news-cards .news-card:hover::after, .news-page__cards .news-card:hover::after {
-  border-bottom-color: #0C1F6B;
-  border-left-color: #0C1F6B;
+  border-bottom-color: #0c1f6b;
+  border-left-color: #0c1f6b;
   -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
   transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
 }
@@ -803,7 +813,7 @@ a {
 }
 
 .news-cards .news-card:hover .news-card__title, .news-page__cards .news-card:hover .news-card__title {
-  color: #0C1F6B;
+  color: #0c1f6b;
 }
 
 .news-cards .news-card:hover .news-card__body, .news-page__cards .news-card:hover .news-card__body {
@@ -812,7 +822,7 @@ a {
 
 .news-cards .news-card__body, .news-page__cards .news-card__body {
   padding: 5.625rem 1.625rem 1.875rem;
-  background-color: #F4F6FF;
+  background-color: #f4f6ff;
   border-radius: 0.625rem;
 }
 
@@ -852,7 +862,7 @@ a {
 }
 
 .news-cards .news-card__date, .news-page__cards .news-card__date {
-  color: #0C1F6B;
+  color: #0c1f6b;
   font-size: 1rem;
   font-weight: 400;
   font-style: normal;
@@ -1692,7 +1702,7 @@ a {
 
 /* Footer */
 .g-footer {
-  background-color: #EEF0F2;
+  background-color: #eef0f2;
   padding: 5rem 0 2rem;
 }
 
@@ -2166,6 +2176,49 @@ a {
   margin: 3.125rem 0 0.625rem;
 }
 
+.g-dashboard__bulk-pay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.g-dashboard__bulk-pay .orders-total {
+  margin-left: 2.1875rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.g-dashboard__bulk-pay .orders-total__text {
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #2f2f30;
+  margin-right: 1.25rem;
+}
+
+.g-dashboard__bulk-pay .orders-total__price {
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: normal;
+}
+
 .dashboard-form .g-form-group {
   margin-bottom: 1.5625rem;
 }
@@ -2393,7 +2446,7 @@ a {
   font-size: 1.125rem;
   font-weight: 700;
   font-style: normal;
-  color: #5B5B5D;
+  color: #5b5b5d;
 }
 
 .about-section__description {
@@ -2464,7 +2517,7 @@ a {
   font-weight: 300;
   font-style: italic;
   margin-bottom: 1.0625rem;
-  color: #2D2B81;
+  color: #2d2b81;
 }
 
 .login-section .register-suggestion {

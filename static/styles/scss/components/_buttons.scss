@@ -13,7 +13,7 @@
   &__paid {
     @include advancedRem(padding, (5 17));
     background-color: #e1e5f6;
-    color: $blue-clr-2;
+    color: $blue-clr-2 !important;
     @include font-size(16, 400);
     border-radius: rem(8);
     border: none;
@@ -22,12 +22,20 @@
 
   &__pay {
     @include advancedRem(padding, (5 34));
-    background-color: #FBE7EB;
-    color: $red-clr;
+    background-color: #fbe7eb;
+    color: $red-clr !important;
     @include font-size(16, 400);
     border-radius: rem(8);
     border: none;
     outline: none;
+  }
+
+  &__mint {
+    background-color: $mint-green;
+    color: #72b8ad !important;
+    @include advancedRem(padding, (7 18));
+    border-radius: rem(8);
+    @include font-size(18, 400);
   }
 
   &__close {
