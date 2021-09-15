@@ -5,12 +5,13 @@
 
   .g-btn {
     min-width: rem(19);
+    padding-bottom: rem(4);
   }
 
   .dropdown-menu {
     border-radius: rem(10);
     min-width: max-content;
-    inset: rem(6) rem(-15) auto auto !important;
+    inset: auto rem(-15) auto auto !important;
     border: none;
 
     &__list {
@@ -54,7 +55,7 @@
 
   .dropdown-menu {
     @include advancedRem(padding, (23 0));
-    inset: 0 auto auto rem(-20) !important;
+    inset: auto auto auto rem(-20) !important;
     border-radius: rem(20);
     border: none;
 

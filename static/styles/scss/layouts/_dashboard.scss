@@ -62,6 +62,20 @@
       margin-bottom: rem(90);
     }
   }
+  
+  .orders-subtitle {
+    @include advancedRem(margin, (30 38 45));
+    line-height: rem(23);
+    color: #6F6F6F;
+    @include font-size(15, 500, italic);
+  }
+
+  &__divider {
+    width: 100%;
+    height: rem(1);
+    background-color: $border-clr;
+    @include advancedRem(margin, (50 0 10));
+  }
 }
 
 .dashboard-form {

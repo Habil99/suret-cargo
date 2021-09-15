@@ -45,7 +45,7 @@
 }
 
 .text-blue {
-  color: #03006c;
+  color: #03006c !important;
 }
 
 .text-dark {
@@ -213,6 +213,7 @@ a {
 
 .language-dropdown .g-btn {
   min-width: 1.1875rem;
+  padding-bottom: 0.25rem;
 }
 
 .language-dropdown .dropdown-menu {
@@ -220,7 +221,7 @@ a {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
-  inset: 0.375rem -0.9375rem auto auto !important;
+  inset: auto -0.9375rem auto auto !important;
   border: none;
 }
 
@@ -282,7 +283,7 @@ a {
 
 .user-dropdown .dropdown-menu {
   padding: 1.4375rem 0;
-  inset: 0 auto auto -1.25rem !important;
+  inset: auto auto auto -1.25rem !important;
   border-radius: 1.25rem;
   border: none;
 }
@@ -1356,6 +1357,11 @@ a {
   min-width: 68.75rem;
 }
 
+.g-table .g-checkbox {
+  -webkit-transform: translateY(-0.5rem);
+          transform: translateY(-0.5rem);
+}
+
 .g-table thead th {
   font-size: 1.125rem;
   font-weight: 400;
@@ -1381,6 +1387,56 @@ a {
   font-size: 1rem;
   font-weight: 400;
   font-style: normal;
+}
+
+.g-table__flag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.g-table__flag img {
+  margin-right: 0.625rem;
+  width: 1.5625rem;
+  border-radius: 0.25rem;
+}
+
+.g-table__btn__collection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.g-table__btn__collection .g-btn {
+  padding: 0.1875rem;
+}
+
+.g-table__btn__collection .g-btn:first-child {
+  margin-right: 1.5625rem;
 }
 
 /* Layouts */
@@ -2092,6 +2148,22 @@ a {
 
 .g-dashboard__tabs__wrapper.on-declarations {
   margin-bottom: 5.625rem;
+}
+
+.g-dashboard .orders-subtitle {
+  margin: 1.875rem 2.375rem 2.8125rem;
+  line-height: 1.4375rem;
+  color: #6F6F6F;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.g-dashboard__divider {
+  width: 100%;
+  height: 0.0625rem;
+  background-color: #e6e6e7;
+  margin: 3.125rem 0 0.625rem;
 }
 
 .dashboard-form .g-form-group {
