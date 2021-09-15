@@ -1,5 +1,11 @@
 .dashboard-section {
   @include advancedRem(margin, (100 0 150));
+
+  .total-price {
+    @include font-size(20, 500);
+    line-height: rem(30);
+    margin-right: rem(25);
+  }
 }
 
 .g-dashboard {

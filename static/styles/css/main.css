@@ -2015,6 +2015,14 @@ a {
   margin: 6.25rem 0 9.375rem;
 }
 
+.dashboard-section .total-price {
+  font-size: 1.25rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.875rem;
+  margin-right: 1.5625rem;
+}
+
 .g-dashboard {
   position: relative;
   background-color: #fff;
