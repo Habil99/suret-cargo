@@ -518,7 +518,7 @@ a {
   content: "";
   position: absolute;
   width: 60%;
-  height: 150%;
+  height: 120%;
   top: -9.375rem;
   left: -9.375rem;
   -webkit-filter: blur(31.25rem);
@@ -532,7 +532,7 @@ a {
   content: "";
   position: absolute;
   width: 64%;
-  height: 150%;
+  height: 120%;
   top: -9.375rem;
   right: -9.375rem;
   -webkit-filter: blur(31.25rem);
