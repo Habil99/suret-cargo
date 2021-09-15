@@ -1349,6 +1349,44 @@ a {
   margin-right: 1.25rem;
 }
 
+.edit-modal .modal-dialog {
+  max-width: 58.75rem;
+}
+
+.edit-modal .modal-header {
+  padding-top: 0;
+}
+
+.edit-modal .modal-content {
+  padding: 1.5625rem 3.125rem 4.0625rem;
+}
+
+.edit-modal__title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-style: normal;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.edit-modal .modal-body,
+.edit-modal .modal-footer {
+  border: none;
+}
+
+.edit-modal .modal-body {
+  padding: 2.8125rem 0 0;
+}
+
+.edit-modal__btn {
+  padding: 0.9375rem 2.3125rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-style: normal;
+  width: 100%;
+}
+
 .g-table {
   width: 100%;
   overflow-x: auto;

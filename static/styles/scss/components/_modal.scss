@@ -59,3 +59,40 @@
     }
   }
 }
+
+.edit-modal {
+  
+  .modal-dialog {
+    max-width: rem(940);
+  }
+
+  .modal-header {
+    padding-top: 0;
+  }
+
+  .modal-content {
+    @include advancedRem(padding, (25 50 65));
+  }
+
+  &__title {
+    text-align: center;
+    @include font-size(24, 500);
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .modal-body,
+  .modal-footer {
+    border: none;
+  }
+
+  .modal-body {
+    @include advancedRem(padding, (45 0 0));
+  }
+
+  &__btn {
+    @include advancedRem(padding, (15, 37));
+    @include font-size(18, 400);
+    width: 100%;
+  }
+}

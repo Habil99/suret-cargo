@@ -294,7 +294,7 @@
                   <td></td>
                   <td>
                     <div class="g-table__btn__collection">
-                      <button class="g-btn">
+                      <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
                       </button>
                       <button class="g-btn">
@@ -320,7 +320,7 @@
                   <td></td>
                   <td>
                     <div class="g-table__btn__collection">
-                      <button class="g-btn">
+                      <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
                       </button>
                       <button class="g-btn">
@@ -346,7 +346,7 @@
                   <td></td>
                   <td>
                     <div class="g-table__btn__collection">
-                      <button class="g-btn">
+                      <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
                       </button>
                       <button class="g-btn">
@@ -372,7 +372,7 @@
                   <td>Qeyd</td>
                   <td>
                     <div class="g-table__btn__collection">
-                      <button class="g-btn">
+                      <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
                       </button>
                       <button class="g-btn">
@@ -406,7 +406,7 @@
                   <th>Toplam TL+5%</th>
                   <th>Qeyd</th>
                   <th>Status</th>
-                  <th>Əməliyyatlar</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
@@ -436,7 +436,7 @@
                   </td>
                   <td>
                     <div class="g-table__btn__collection">
-                      <button class="g-btn">
+                      <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
                       </button>
                       <button class="g-btn">
@@ -471,7 +471,7 @@
                   </td>
                   <td>
                     <div class="g-table__btn__collection">
-                      <button class="g-btn">
+                      <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
                       </button>
                       <button class="g-btn">
@@ -506,7 +506,7 @@
                   </td>
                   <td>
                     <div class="g-table__btn__collection">
-                      <button class="g-btn">
+                      <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
                       </button>
                       <button class="g-btn">
@@ -621,6 +621,56 @@
   </div>
 
   <!--------------------------- Footer Section --------------------------->
+
+  <!--------------------------- Edit Modal Section --------------------------->
+
+  <div class="modal fade g-modal edit-modal" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalId"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="edit-modal__title">Düzəliş</p>
+          <button type="button" class="g-btn g-btn__close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="g-form">
+            <div class="dashboard-form">
+              <div class="row">
+                <div class="col-12">
+                  <div class="g-form-group">
+                    <label for="" class="g-label __white">Link</label>
+                    <input type="url" class="g-input __gray">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="g-form-group">
+                    <label for="" class="g-label __white">Ölçü</label>
+                    <input type="text" class="g-input __gray">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="g-form-group">
+                    <label for="" class="g-label __white">Rəng</label>
+                    <input type="text" class="g-input __gray">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <button class="g-btn edit-modal__btn g-btn__blue">Düzəliş et</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--------------------------- Edit Modal Section --------------------------->
 
 
   <script src="./static/js/min/jquery.min.js"></script>
