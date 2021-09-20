@@ -18,6 +18,18 @@
   .g-form-group {
     @include flexbox(column);
     position: relative;
+
+    &.__gray {
+      .g-label {
+        color: $label-clr;
+        background-color: $white-clr;
+      }
+
+      .g-input {
+        border-color: $border-clr;
+        color: $label-clr;
+      }
+    }
   }
 
   .g-label {
@@ -28,6 +40,10 @@
     color: $dark-gray;
     @include font-size(18, 300);
     z-index: 1;
+    max-width: calc(100% - #{rem(100)});
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     &.__white {
       background-color: $white-clr;
@@ -132,5 +148,4 @@
   &.__resize {
     resize: vertical;
   }
-
 }

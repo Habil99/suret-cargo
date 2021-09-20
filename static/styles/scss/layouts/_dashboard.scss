@@ -118,7 +118,6 @@
     @include advancedRem(padding, (100 130 0));
 
     .balance-img {
-
       img {
         user-select: none;
         pointer-events: none;
@@ -128,6 +127,28 @@
       }
     }
   }
+
+  /* Settings */
+
+  &__settings {
+    @include advancedRem(padding, (40 100 90));
+
+    .settings-form {
+      .g-form-group {
+        margin-bottom: rem(30);
+      }
+
+      &__title {
+        margin-bottom: rem(40);
+      }
+
+      &__note {
+        @include font-size(15, 500);
+      }
+    }
+  }
+
+  /* Settings */
 }
 
 .dashboard-form {

@@ -1,6 +1,11 @@
 .g-balance {
   @include advancedRem(margin, (70 100 85));
 
+  .bonus-card {
+    max-width: max-content;
+    width: 100%;
+  }
+
   &__card {
     border: rem(2) solid #eb323b;
     border-radius: rem($radius-20);
