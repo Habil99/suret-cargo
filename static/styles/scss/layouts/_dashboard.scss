@@ -118,7 +118,10 @@
     @include advancedRem(padding, (100 130 0));
 
     .balance-img {
+
       img {
+        user-select: none;
+        pointer-events: none;
         width: 100%;
         object-fit: cover;
         margin-top: rem(-150);

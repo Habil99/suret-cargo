@@ -2335,6 +2335,11 @@ a {
 }
 
 .g-dashboard__balance .balance-img img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
