@@ -236,12 +236,12 @@
               <div class="g-tab-swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <a href="orders-in-queue.html" class="g-tab-bordered__item active">
+                    <a href="orders-in-queue.html" class="g-tab-bordered__item">
                       <span>Sifariş üçün növbədə - 3</span>
                     </a>
                   </div>
                   <div class="swiper-slide">
-                    <a href="orders.html" class="g-tab-bordered__item">
+                    <a href="orders.html" class="g-tab-bordered__item active">
                       <span>Sifariş olunmuşlar - 21</span>
                     </a>
                   </div>
@@ -272,13 +272,14 @@
                   <th>Sifariş No</th>
                   <th>Tarix</th>
                   <th>Link</th>
+                  <th>Məhsul tipi</th>
                   <th>Ölçü</th>
                   <th>Rəng</th>
                   <th>Miqdar</th>
                   <th>Qiymət TL</th>
                   <th>Qiymət AZN</th>
                   <th>Qeyd</th>
-                  <th>Əməliyyatlar</th>
+                  <!-- <th>Əməliyyatlar</th> -->
                 </tr>
               </thead>
               <tbody>
@@ -291,13 +292,14 @@
                   <td>
                     <a class="g-btn text-blue" href="">Link</a>
                   </td>
+                  <td>Araba aksesuarı</td>
                   <td>XL</td>
                   <td>Qara</td>
                   <td>1</td>
                   <td>39.99 TL</td>
                   <td>10.80 AZN </td>
                   <td></td>
-                  <td>
+                  <!-- <td>
                     <div class="g-table__btn__collection">
                       <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
@@ -306,7 +308,7 @@
                         <img src="./static/assets/svgs/icons/bx_bx-trash.svg" alt="Suret Cargo | Remove Order">
                       </button>
                     </div>
-                  </td>
+                  </td> -->
                 </tr>
                 <tr>
                   <td class="g-table__flag">
@@ -317,13 +319,14 @@
                   <td>
                     <a class="g-btn text-blue" href="">Link</a>
                   </td>
+                  <td>Elbise</td>
                   <td>XL</td>
                   <td>Qara</td>
                   <td>1</td>
                   <td>39.99 TL</td>
                   <td>10.80 AZN </td>
                   <td></td>
-                  <td>
+                  <!-- <td>
                     <div class="g-table__btn__collection">
                       <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
@@ -332,7 +335,7 @@
                         <img src="./static/assets/svgs/icons/bx_bx-trash.svg" alt="Suret Cargo | Remove Order">
                       </button>
                     </div>
-                  </td>
+                  </td> -->
                 </tr>
                 <tr>
                   <td class="g-table__flag">
@@ -343,13 +346,14 @@
                   <td>
                     <a class="g-btn text-blue" href="https://">Link</a>
                   </td>
+                  <td>Elbise</td>
                   <td>XL</td>
                   <td>Qara</td>
                   <td>1</td>
                   <td>39.99 TL</td>
                   <td>10.80 AZN </td>
                   <td></td>
-                  <td>
+                  <!-- <td>
                     <div class="g-table__btn__collection">
                       <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
@@ -358,7 +362,7 @@
                         <img src="./static/assets/svgs/icons/bx_bx-trash.svg" alt="Suret Cargo | Remove Order">
                       </button>
                     </div>
-                  </td>
+                  </td> -->
                 </tr>
                 <tr>
                   <td class="g-table__flag">
@@ -369,13 +373,14 @@
                   <td>
                     <a class="g-btn text-blue" href="">Link</a>
                   </td>
+                  <td>Araba aksesuarı</td>
                   <td>XL</td>
                   <td>Qara</td>
                   <td>1</td>
                   <td>39.99 TL</td>
                   <td>10.80 AZN </td>
                   <td>Qeyd</td>
-                  <td>
+                  <!-- <td>
                     <div class="g-table__btn__collection">
                       <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
@@ -384,7 +389,7 @@
                         <img src="./static/assets/svgs/icons/bx_bx-trash.svg" alt="Suret Cargo | Remove Order">
                       </button>
                     </div>
-                  </td>
+                  </td> -->
                 </tr>
               </tbody>
             </table>
@@ -395,33 +400,21 @@
             <table class="table">
               <thead>
                 <tr>
-                  <th>
-                    <div class="g-checkbox">
-                      <input class="hidden" id="all-orders" type="checkbox">
-                      <label class="g-checkbox__label" for="all-orders"></label>
-                    </div>
-                  </th>
                   <th>Sifariş No</th>
                   <th>Tarix</th>
                   <th>Link</th>
+                  <th>Məhsul tipi</th>
                   <th>Ölçü</th>
                   <th>Rəng</th>
                   <th>Miqdar</th>
                   <th>Qiymət TL</th>
-                  <th>Toplam TL+5%</th>
+                  <th>Qiymət AZN</th>
                   <th>Qeyd</th>
-                  <th>Status</th>
-                  <th></th>
+                  <!-- <th>Əməliyyatlar</th> -->
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>
-                    <div class="g-checkbox">
-                      <input class="hidden" id="order-1" type="checkbox">
-                      <label class="g-checkbox__label" for="order-1"></label>
-                    </div>
-                  </td>
                   <td class="g-table__flag">
                     <img src="./static/assets/svgs/turkey-flag.svg" alt="Suret Cargo | Turkey Order">
                     <span>311981</span>
@@ -430,16 +423,14 @@
                   <td>
                     <a class="g-btn text-blue" href="">Link</a>
                   </td>
+                  <td>Araba aksesuarı</td>
                   <td>XL</td>
                   <td>Qara</td>
                   <td>1</td>
                   <td>39.99 TL</td>
-                  <td>1050 TL</td>
-                  <td>Qeyd</td>
-                  <td>
-                    <button class="g-btn__paid">Ödənilib</button>
-                  </td>
-                  <td>
+                  <td>10.80 AZN </td>
+                  <td></td>
+                  <!-- <td>
                     <div class="g-table__btn__collection">
                       <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
@@ -448,15 +439,9 @@
                         <img src="./static/assets/svgs/icons/bx_bx-trash.svg" alt="Suret Cargo | Remove Order">
                       </button>
                     </div>
-                  </td>
+                  </td> -->
                 </tr>
                 <tr>
-                  <td>
-                    <div class="g-checkbox">
-                      <input class="hidden" id="order-2" type="checkbox">
-                      <label class="g-checkbox__label" for="order-2"></label>
-                    </div>
-                  </td>
                   <td class="g-table__flag">
                     <img src="./static/assets/svgs/turkey-flag.svg" alt="Suret Cargo | Turkey Order">
                     <span>311981</span>
@@ -465,16 +450,14 @@
                   <td>
                     <a class="g-btn text-blue" href="">Link</a>
                   </td>
+                  <td>Elbise</td>
                   <td>XL</td>
                   <td>Qara</td>
                   <td>1</td>
                   <td>39.99 TL</td>
-                  <td>1050 TL</td>
-                  <td>Qeyd</td>
-                  <td>
-                    <button class="g-btn__paid">Ödənilib</button>
-                  </td>
-                  <td>
+                  <td>10.80 AZN </td>
+                  <td></td>
+                  <!-- <td>
                     <div class="g-table__btn__collection">
                       <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
@@ -483,33 +466,25 @@
                         <img src="./static/assets/svgs/icons/bx_bx-trash.svg" alt="Suret Cargo | Remove Order">
                       </button>
                     </div>
-                  </td>
+                  </td> -->
                 </tr>
                 <tr>
-                  <td>
-                    <div class="g-checkbox">
-                      <input class="hidden" id="order-3" type="checkbox">
-                      <label class="g-checkbox__label" for="order-3"></label>
-                    </div>
-                  </td>
                   <td class="g-table__flag">
                     <img src="./static/assets/svgs/turkey-flag.svg" alt="Suret Cargo | Turkey Order">
                     <span>311981</span>
                   </td>
                   <td>17.06.2021/23:00</td>
                   <td>
-                    <a class="g-btn text-blue" href="">Link</a>
+                    <a class="g-btn text-blue" href="https://">Link</a>
                   </td>
+                  <td>Elbise</td>
                   <td>XL</td>
                   <td>Qara</td>
                   <td>1</td>
                   <td>39.99 TL</td>
-                  <td>1050 TL</td>
-                  <td>Qeyd</td>
-                  <td>
-                    <button class="g-btn__paid">Ödənilib</button>
-                  </td>
-                  <td>
+                  <td>10.80 AZN </td>
+                  <td></td>
+                  <!-- <td>
                     <div class="g-table__btn__collection">
                       <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
                         <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
@@ -518,18 +493,45 @@
                         <img src="./static/assets/svgs/icons/bx_bx-trash.svg" alt="Suret Cargo | Remove Order">
                       </button>
                     </div>
+                  </td> -->
+                </tr>
+                <tr>
+                  <td class="g-table__flag">
+                    <img src="./static/assets/svgs/turkey-flag.svg" alt="Suret Cargo | Turkey Order">
+                    <span>311981</span>
                   </td>
+                  <td>17.06.2021/23:00</td>
+                  <td>
+                    <a class="g-btn text-blue" href="">Link</a>
+                  </td>
+                  <td>Araba aksesuarı</td>
+                  <td>XL</td>
+                  <td>Qara</td>
+                  <td>1</td>
+                  <td>39.99 TL</td>
+                  <td>10.80 AZN </td>
+                  <td>Qeyd</td>
+                  <!-- <td>
+                    <div class="g-table__btn__collection">
+                      <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
+                        <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
+                      </button>
+                      <button class="g-btn">
+                        <img src="./static/assets/svgs/icons/bx_bx-trash.svg" alt="Suret Cargo | Remove Order">
+                      </button>
+                    </div>
+                  </td> -->
                 </tr>
               </tbody>
             </table>
           </div>
-          <div class="g-dashboard__bulk-pay">
+          <!-- <div class="g-dashboard__bulk-pay">
             <a href="balance.html" class="g-btn__mint">Seçilənləri toplam ödə</a>
             <div class="orders-total">
               <span class="orders-total__text">Toplam:</span>
               <span class="orders-total__price">3000 TL</span>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

@@ -64,7 +64,7 @@
   }
   
   .orders-subtitle {
-    @include advancedRem(margin, (30 38 45));
+    @include advancedRem(margin, (30 40 45));
     line-height: rem(23);
     color: #6F6F6F;
     @include font-size(15, 500, italic);
@@ -93,6 +93,24 @@
       &__price {
         @include font-size(16, 600);
       }
+    }
+  }
+
+  &__alert {
+    @include flex-center();
+    margin: rem(55) 0;
+    color: $dark-gray;
+    @include font-size(18, 400);
+    padding: 0 rem(40);
+    text-align: center;
+
+    * {
+      margin-bottom: 0;
+    }
+    
+    a:hover {
+      @include transition();
+      color: $blue-clr-2;
     }
   }
 }
@@ -126,4 +144,14 @@
       }
     }
   }
+}
+
+.no-orders {
+  width: 100%;
+  @include flex-center();
+  padding: rem(25);
+  background: $blue-gradient;
+  color: $white-clr;
+  @include font-size(18, 400);
+  @include advancedRem(margin, (30 0 50));
 }
