@@ -219,10 +219,10 @@
                 <a href="declarations.html" class="g-tab__item">Bağlamar</a>
               </div>
               <div class="swiper-slide">
-                <a href="orders-in-queue.html" class="g-tab__item active">Sifarişlər</a>
+                <a href="orders-in-queue.html" class="g-tab__item">Sifarişlər</a>
               </div>
               <div class="swiper-slide">
-                <a href="balance.html" class="g-tab__item">Balans</a>
+                <a href="balance.html" class="g-tab__item active">Balans</a>
               </div>
               <div class="swiper-slide">
                 <a href="settings.html" class="g-tab__item">Tənzimləmələr</a>
@@ -231,183 +231,88 @@
           </div>
         </div>
         <div class="g-dashboard g-dashboard__py">
-          <div class="g-dashboard__tabs__wrapper">
-            <div class="g-tab-bordered">
-              <div class="g-tab-swiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <a href="orders-in-queue.html" class="g-tab-bordered__item">
-                      <span>Sifariş üçün növbədə - 3</span>
-                    </a>
+          <div class="g-balance">
+            <div class="g-balance__card">
+              <div class="g-balance__card--inner">
+                <p class="g-text__md">Hazırkı balans: 42.37 AZN</p>
+                <p class="g-text__sm">Balansınızı artırarkən məbləğ kartınızdan USD olaraq çıxılacaqdır. Heç bir
+                  komissiya
+                  və ya tutqu olmayacaqdır</p>
+                <form action="">
+                  <div class="g-form">
+                    <div class="row">
+                      <div class="col-lg-7">
+                        <div class="g-form-group">
+                          <label for="set_amount" class="g-label __white">Məbləğ daxil edin</label>
+                          <input type="text" id="set_amount" class="g-input __gray">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <a href="balance-form.html" class="g-btn g-btn__flex g-btn__blue btn-increase-balance">Balans artır</a>
+                      </div>
+                    </div>
                   </div>
-                  <div class="swiper-slide">
-                    <a href="orders.html" class="g-tab-bordered__item">
-                      <span>Sifariş olunmuşlar - 21</span>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="orders-canceled.html" class="g-tab-bordered__item">
-                      <span>Ləğv edilənlər - 0</span>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="orders-delivered.html" class="g-tab-bordered__item active">
-                      <span>Təhvil verilənlər - 0</span>
-                    </a>
-                  </div>
-                  <div class="swiper-slide">
-                    <a href="orders-from-seller.html" class="g-tab-bordered__item">
-                      <span>Satıcıdan gələnlər - 6</span>
-                    </a>
-                  </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
-          <p class="orders-subtitle">Mənim üçün al xidməti üzərindən göndərilmiş linklər</p>
-          <div class="no-orders">
-            <span class="no-orders-text">Sifariş yoxdur</span>
-          </div>
-          <div class="g-dashboard__divider"></div>
-          <p class="orders-subtitle">Sifariş et xidməti üzərindən göndərilmiş linklər</p>
           <div class="g-table">
-            <table class="table">
+            <table class="table balance-table">
               <thead>
                 <tr>
-                  <th>
-                    <div class="g-checkbox">
-                      <input class="hidden" id="all-orders" type="checkbox">
-                      <label class="g-checkbox__label" for="all-orders"></label>
-                    </div>
-                  </th>
-                  <th>Sifariş No</th>
                   <th>Tarix</th>
-                  <th>Link</th>
-                  <th>Ölçü</th>
-                  <th>Rəng</th>
-                  <th>Miqdar</th>
-                  <th>Qiymət TL</th>
-                  <th>Toplam TL+5%</th>
-                  <th>Qeyd</th>
-                  <th>Status</th>
-                  <th></th>
+                  <th>Məbləğ</th>
+                  <th>Hazırki balans</th>
+                  <th>Əməliyyat</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>
-                    <div class="g-checkbox">
-                      <input class="hidden" id="order-1" type="checkbox">
-                      <label class="g-checkbox__label" for="order-1"></label>
-                    </div>
-                  </td>
-                  <td class="g-table__flag">
-                    <img src="./static/assets/svgs/turkey-flag.svg" alt="Suret Cargo | Turkey Order">
-                    <span>311981</span>
-                  </td>
                   <td>17.06.2021/23:00</td>
                   <td>
-                    <a class="g-btn text-blue" href="">Link</a>
-                  </td>
-                  <td>XL</td>
-                  <td>Qara</td>
-                  <td>1</td>
-                  <td>39.99 TL</td>
-                  <td>1050 TL</td>
-                  <td>Qeyd</td>
-                  <td>
-                    <button class="g-btn__paid">Ödənilib</button>
-                  </td>
-                  <td>
-                    <div class="g-table__btn__collection">
-                      <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
-                        <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
-                      </button>
-                      <button class="g-btn">
-                        <img src="./static/assets/svgs/icons/bx_bx-trash.svg" alt="Suret Cargo | Remove Order">
-                      </button>
+                    <div class="g-table__rate">
+                      <img src="./static/assets/svgs/icons/arrow-up.svg" alt="">
+                      <span>1 AZN</span>
                     </div>
                   </td>
+                  <td>4.37 AZN</td>
+                  <td>2784440 nömrəli bağlama üçün daşınma haqqı ödənişindən qazanılan cashback</td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="g-checkbox">
-                      <input class="hidden" id="order-2" type="checkbox">
-                      <label class="g-checkbox__label" for="order-2"></label>
-                    </div>
-                  </td>
-                  <td class="g-table__flag">
-                    <img src="./static/assets/svgs/turkey-flag.svg" alt="Suret Cargo | Turkey Order">
-                    <span>311981</span>
-                  </td>
                   <td>17.06.2021/23:00</td>
                   <td>
-                    <a class="g-btn text-blue" href="">Link</a>
-                  </td>
-                  <td>XL</td>
-                  <td>Qara</td>
-                  <td>1</td>
-                  <td>39.99 TL</td>
-                  <td>1050 TL</td>
-                  <td>Qeyd</td>
-                  <td>
-                    <button class="g-btn__paid">Ödənilib</button>
-                  </td>
-                  <td>
-                    <div class="g-table__btn__collection">
-                      <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
-                        <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
-                      </button>
-                      <button class="g-btn">
-                        <img src="./static/assets/svgs/icons/bx_bx-trash.svg" alt="Suret Cargo | Remove Order">
-                      </button>
+                    <div class="g-table__rate">
+                      <img src="./static/assets/svgs/icons/arrow-down.svg" alt="">
+                      <span>9398.02 AZN</span>
                     </div>
                   </td>
+                  <td>4.37 AZN</td>
+                  <td>Naxcıvan bank terminalı ilə balans artımı</td>
                 </tr>
                 <tr>
-                  <td>
-                    <div class="g-checkbox">
-                      <input class="hidden" id="order-3" type="checkbox">
-                      <label class="g-checkbox__label" for="order-3"></label>
-                    </div>
-                  </td>
-                  <td class="g-table__flag">
-                    <img src="./static/assets/svgs/turkey-flag.svg" alt="Suret Cargo | Turkey Order">
-                    <span>311981</span>
-                  </td>
                   <td>17.06.2021/23:00</td>
                   <td>
-                    <a class="g-btn text-blue" href="">Link</a>
-                  </td>
-                  <td>XL</td>
-                  <td>Qara</td>
-                  <td>1</td>
-                  <td>39.99 TL</td>
-                  <td>1050 TL</td>
-                  <td>Qeyd</td>
-                  <td>
-                    <button class="g-btn__paid">Ödənilib</button>
-                  </td>
-                  <td>
-                    <div class="g-table__btn__collection">
-                      <button class="g-btn" data-bs-toggle="modal" data-bs-target="#editModal">
-                        <img src="./static/assets/svgs/icons/edit.svg" alt="Suret Cargo | Edit Order">
-                      </button>
-                      <button class="g-btn">
-                        <img src="./static/assets/svgs/icons/bx_bx-trash.svg" alt="Suret Cargo | Remove Order">
-                      </button>
+                    <div class="g-table__rate">
+                      <img src="./static/assets/svgs/icons/arrow-up.svg" alt="">
+                      <span>1.12 AZN</span>
                     </div>
                   </td>
+                  <td>4.37 AZN</td>
+                  <td>2784440 nömrəli bağlama üçün ödəniş</td>
+                </tr>
+                <tr>
+                  <td>17.06.2021/23:00</td>
+                  <td>
+                    <div class="g-table__rate">
+                      <img src="./static/assets/svgs/icons/arrow-down.svg" alt="">
+                      <span>9398.02 AZN</span>
+                    </div>
+                  </td>
+                  <td>4.37 AZN</td>
+                  <td>Naxcıvan bank terminalı ilə balans artımı</td>
                 </tr>
               </tbody>
             </table>
-          </div>
-          <div class="g-dashboard__bulk-pay">
-            <a href="balance.html" class="g-btn__mint">Seçilənləri toplam ödə</a>
-            <div class="orders-total">
-              <span class="orders-total__text">Toplam:</span>
-              <span class="orders-total__price">3000 TL</span>
-            </div>
           </div>
         </div>
       </div>
@@ -546,9 +451,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="modal-footer">
-
         </div>
       </div>
     </div>

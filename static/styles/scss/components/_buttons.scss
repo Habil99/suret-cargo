@@ -1,4 +1,11 @@
 .g-btn {
+
+  &__flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   $radius: rem(26);
   border: none;
   outline: none;

@@ -1,0 +1,22 @@
+.g-balance {
+  @include advancedRem(margin, (70 100 85));
+
+  &__card {
+    border: rem(2) solid #eb323b;
+    border-radius: rem($radius-20);
+    @include advancedRem(padding, (40 75));
+
+    &--inner {
+      width: 100%;
+      max-width: rem(820);
+    }
+  }
+
+  .g-form {
+    margin-top: rem(35);
+  }
+
+  .btn-increase-balance {
+    height: 59px;
+  }
+}

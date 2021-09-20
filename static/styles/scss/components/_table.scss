@@ -8,11 +8,25 @@
     display: none;
   }
 
+  &__rate {
+    @include flex-center();
+
+    img {
+      margin-right: rem(12);
+    }
+  }
+
   .table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 rem(6);
     min-width: rem(1100);
+
+    &.balance-table {
+      tr td:last-child {
+        text-align: left;
+      }
+    }
   }
 
   .g-checkbox {
