@@ -496,8 +496,8 @@ a {
 
 .g-btn__blue--outline {
   background: transparent;
-  border: 1px solid #03006c;
-  color: #03006c;
+  border: 0.0625rem solid #03006c;
+  color: #03006c !important;
 }
 
 .g-btn__red {
@@ -511,7 +511,7 @@ a {
 
 .g-btn__red--outline {
   background: transparent;
-  border: 1px solid #eb4838;
+  border: 0.0625rem solid #eb4838;
   color: #03006c;
 }
 
@@ -2239,7 +2239,7 @@ a {
 .g-dashboard .orders-subtitle {
   margin: 1.875rem 2.5rem 2.8125rem;
   line-height: 1.4375rem;
-  color: #6F6F6F;
+  color: #6f6f6f;
   font-size: 0.9375rem;
   font-weight: 500;
   font-style: italic;
@@ -2328,6 +2328,17 @@ a {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
   color: #353299;
+}
+
+.g-dashboard__balance {
+  padding: 6.25rem 8.125rem 0;
+}
+
+.g-dashboard__balance .balance-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: -9.375rem;
 }
 
 .dashboard-form .g-form-group {
@@ -3286,5 +3297,47 @@ a {
 
 .g-balance .btn-increase-balance {
   height: 59px;
+}
+
+.balance-form {
+  width: 100%;
+  max-width: 38.75rem;
+  margin: 0 auto;
+}
+
+.balance-form .g-form-group {
+  margin-bottom: 1.25rem;
+}
+
+.balance-form__title {
+  margin-bottom: 3.125rem;
+}
+
+.balance-form__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-top: 0.9375rem;
+  align-items: center;
+}
+
+.balance-form__buttons .g-btn {
+  min-height: 3.5rem;
+}
+
+.balance-form__buttons .g-btn:last-child {
+  margin-left: 1.5625rem;
 }
 /*# sourceMappingURL=main.css.map */

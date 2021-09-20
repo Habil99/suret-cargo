@@ -88,8 +88,8 @@
 
     &--outline {
       background: transparent;
-      border: 1px solid $blue-clr;
-      color: $blue-clr;
+      border: rem(1) solid $blue-clr;
+      color: $blue-clr !important;
     }
   }
 
@@ -102,7 +102,7 @@
 
     &--outline {
       background: transparent;
-      border: 1px solid $red-clr;
+      border: rem(1) solid $red-clr;
 
       color: $blue-clr;
 

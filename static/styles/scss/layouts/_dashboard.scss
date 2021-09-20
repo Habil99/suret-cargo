@@ -39,7 +39,7 @@
     .g-btn {
       @include font-size(16, 600);
       line-height: rem(24);
-      
+
       &:not(:last-child) {
         margin-bottom: rem(8);
       }
@@ -62,11 +62,11 @@
       margin-bottom: rem(90);
     }
   }
-  
+
   .orders-subtitle {
     @include advancedRem(margin, (30 40 45));
     line-height: rem(23);
-    color: #6F6F6F;
+    color: #6f6f6f;
     @include font-size(15, 500, italic);
   }
 
@@ -107,10 +107,22 @@
     * {
       margin-bottom: 0;
     }
-    
+
     a:hover {
       @include transition();
       color: $blue-clr-2;
+    }
+  }
+
+  &__balance {
+    @include advancedRem(padding, (100 130 0));
+
+    .balance-img {
+      img {
+        width: 100%;
+        object-fit: cover;
+        margin-top: rem(-150);
+      }
     }
   }
 }

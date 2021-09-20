@@ -20,3 +20,30 @@
     height: 59px;
   }
 }
+
+.balance-form {
+  width: 100%;
+  max-width: rem(620);
+  margin: 0 auto;
+
+  .g-form-group {
+    margin-bottom: rem(20);
+  }
+
+  &__title {
+    margin-bottom: rem(50);
+  }
+
+  &__buttons {
+    @include justify-end();
+    margin-top: rem(15);
+    align-items: center;
+
+    .g-btn {
+      min-height: rem(56);
+      &:last-child {
+        margin-left: rem(25);
+      }
+    }
+  }
+}
