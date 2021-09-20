@@ -205,114 +205,15 @@
 
   <div class="dashboard-section">
     <div class="g-backdrop g-backdrop__rtl">
-      <div class="g-container">
-        <div class="g-tab">
-          <div class="g-tab__carousel">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <a href="create-order.html" class="g-tab__item">Sifariş et</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="foreign-addresses.html" class="g-tab__item">Xaricdəki ünvanlarım</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="declarations.html" class="g-tab__item">Bağlamar</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="orders-in-queue.html" class="g-tab__item">Sifarişlər</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="balance.html" class="g-tab__item active">Balans</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="settings.html" class="g-tab__item">Tənzimləmələr</a>
-              </div>
+      <div class="g-container__md">
+        <div class="g-dashboard">
+          <div class="g-dashboard__commitment">
+            <p class="g-title__md text-blue-2 text-center">Etibarnamələrim</p>
+            <div class="commitment-wrapper">
+              <p class="g-text__md text-red commitment-wrapper__title">Sizin etibarnaməniz yoxdur !</p>
+              <button class="g-btn g-btn__md g-btn__blue" data-bs-toggle="modal"
+                data-bs-target="#significantInformation">Yeni etibarnamə </button>
             </div>
-          </div>
-        </div>
-        <div class="g-dashboard g-dashboard__py">
-          <div class="g-balance">
-            <div class="g-balance__card">
-              <div class="g-balance__card--inner">
-                <p class="g-text__md">Hazırkı balans: 42.37 AZN</p>
-                <p class="g-text__sm">Balansınızı artırarkən məbləğ kartınızdan USD olaraq çıxılacaqdır. Heç bir
-                  komissiya
-                  və ya tutqu olmayacaqdır</p>
-                <form action="">
-                  <div class="g-form">
-                    <div class="row">
-                      <div class="col-lg-7">
-                        <div class="g-form-group">
-                          <label for="set_amount" class="g-label __white">Məbləğ daxil edin</label>
-                          <input type="text" id="set_amount" class="g-input __gray">
-                        </div>
-                      </div>
-                      <div class="col-lg-3">
-                        <a href="balance-form.html" class="g-btn g-btn__flex g-btn__blue btn-increase-balance">Balans artır</a>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="g-table">
-            <table class="table balance-table">
-              <thead>
-                <tr>
-                  <th>Tarix</th>
-                  <th>Məbləğ</th>
-                  <th>Hazırki balans</th>
-                  <th>Əməliyyat</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>17.06.2021/23:00</td>
-                  <td>
-                    <div class="g-table__rate">
-                      <img src="./static/assets/svgs/icons/arrow-up.svg" alt="">
-                      <span>1 AZN</span>
-                    </div>
-                  </td>
-                  <td>4.37 AZN</td>
-                  <td>2784440 nömrəli bağlama üçün daşınma haqqı ödənişindən qazanılan cashback</td>
-                </tr>
-                <tr>
-                  <td>17.06.2021/23:00</td>
-                  <td>
-                    <div class="g-table__rate">
-                      <img src="./static/assets/svgs/icons/arrow-down.svg" alt="">
-                      <span>9398.02 AZN</span>
-                    </div>
-                  </td>
-                  <td>4.37 AZN</td>
-                  <td>Naxcıvan bank terminalı ilə balans artımı</td>
-                </tr>
-                <tr>
-                  <td>17.06.2021/23:00</td>
-                  <td>
-                    <div class="g-table__rate">
-                      <img src="./static/assets/svgs/icons/arrow-up.svg" alt="">
-                      <span>1.12 AZN</span>
-                    </div>
-                  </td>
-                  <td>4.37 AZN</td>
-                  <td>2784440 nömrəli bağlama üçün ödəniş</td>
-                </tr>
-                <tr>
-                  <td>17.06.2021/23:00</td>
-                  <td>
-                    <div class="g-table__rate">
-                      <img src="./static/assets/svgs/icons/arrow-down.svg" alt="">
-                      <span>9398.02 AZN</span>
-                    </div>
-                  </td>
-                  <td>4.37 AZN</td>
-                  <td>Naxcıvan bank terminalı ilə balans artımı</td>
-                </tr>
-              </tbody>
-            </table>
           </div>
         </div>
       </div>
@@ -411,12 +312,97 @@
 
   <!--------------------------- Footer Section --------------------------->
 
+  <!--------------------------- Edit Modal Section --------------------------->
+
+  <div class="modal fade g-modal commitment-modal" id="commitmentModal" tabindex="-1" role="dialog"
+    aria-labelledby="commitmentlId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="g-modal__title">Yeni etibarnamə</p>
+          <button type="button" class="g-btn g-btn__close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="g-form">
+            <div class="dashboard-form">
+              <div class="g-form-group __gray">
+                <label for="" class="g-label">Ad soyad</label>
+                <input type="url" class="g-input">
+              </div>
+              <div class="g-form-group __gray">
+                <label for="" class="g-label">Telefon</label>
+                <input type="text" class="g-input">
+              </div>
+              <div class="g-form-group __gray">
+                <label for="" class="g-label">Rəng</label>
+                <input type="number" class="g-input">
+              </div>
+              <div class="g-form-group __gray">
+                <label for="" class="g-label">Ş.V-nin nömrəsi</label>
+                <input type="number" class="g-input">
+              </div>
+              <div class="_flex-center">
+                <button class="g-btn edit-modal__btn g-btn__blue w-content">Düzəliş et</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!--------------------------- Edit Modal Section --------------------------->
+
+  <!--------------------------- Modal Section --------------------------->
+
+  <div class="modal fade g-modal information-modal" id="significantInformation" tabindex="-1" role="dialog"
+    aria-labelledby="significantInformationTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="g-modal__title">Vacib məlumat !</p>
+          <button type="button" class="g-btn g-btn__close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="g-modal__text">
+            <span>
+              Hörməlti müştəri, siz bu bölmədə bağlamalarınızı təhvil almağını istədiyiniz şəxsə saytımız üzərindən
+              online etibarnamə verirsiniz.
+            </span>
+            <span>
+              Beləliklə həmini şəxs ofisimizə yaxınlaşaraq öz şəxsiyyət vəsiqəsini təqdim edərək sizin bağlamalarınızı
+              təhvil alır.
+            </span>
+            <span>
+              Bağlamalar etibarnamə əsasında digər bir şəxsə təhvil verildikdən sonra bağlamalara görə məsuliyyət
+              birbaşa
+              həmin şəxsə keçir.
+            </span>
+          </div>
+        </div>
+        <div class="modal-footer justify-content-center">
+          <button type="button" class="g-btn g-btn__md g-btn__blue" data-bs-dismiss="modal"
+            data-bs-target="#commitmentModal" data-bs-toggle="modal">Oxudum və razıyam</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--------------------------- Modal Section --------------------------->
+
+
+
   <script src="./static/js/min/jquery.min.js"></script>
   <script src="./static/js/min/bootstrap.bundle.min.js"></script>
   <script src="./static/js/main.js"></script>
   <script src="./static/js/min/swiper-bundle.min.js"></script>
   <script src="./static/js/dashboard-tabs-carousel.js"></script>
-  <script src="./static/js/tab-carousel.js"></script>
 
 </body>
 

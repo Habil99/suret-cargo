@@ -32,6 +32,10 @@
   color: $blue-clr !important;
 }
 
+.text-blue-2 {
+  color: $blue-clr-2 !important;
+}
+
 .text-dark {
   color: $dark-gray;
 }
@@ -63,4 +67,8 @@
 
 ._flex-end {
   @include justify-end();
+}
+
+.w-content {
+  width: max-content !important;
 }

@@ -240,6 +240,19 @@
       }
     }
   }
+
+  &__commitment {
+    @include advancedRem(padding, (20 50));
+
+    .commitment-wrapper {
+      min-height: rem(450);
+      @include flex-center(column);
+
+      &__title {
+        margin-bottom: rem(60);
+      }
+    }
+  }
 }
 
 .dashboard-form {
