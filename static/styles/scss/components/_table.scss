@@ -16,6 +16,12 @@
     }
   }
 
+  &__sm {
+    .table {
+      min-width: rem(500) !important;
+    }
+  }
+
   .table {
     width: 100%;
     border-collapse: separate;
@@ -81,6 +87,16 @@
        &:first-child {
          margin-right: rem(25);
        }
+     }
+   }
+
+   &__bordered {
+     td {
+       border: none;
+     }
+     
+     tr {
+       border-bottom: 1px solid #E6E6E7;
      }
    }
 }

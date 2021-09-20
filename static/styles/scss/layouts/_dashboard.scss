@@ -149,6 +149,15 @@
   }
 
   /* Settings */
+  
+  /* Courier */
+
+  &__courier {
+    @include advancedRem(padding, (40 60 100));
+  }
+
+  /* Courier */
+
 }
 
 .dashboard-form {

@@ -14,7 +14,7 @@ sass/
 |– components/
 |   |– _buttons.scss     # Buttons
 |   |– _carousel.scss    # Carousel
-|   |– _cover.scss       # Cover
+|   |– _backdrop.scss    # Backdrop
 |   |– _dropdown.scss    # Dropdown
 |   ...                  # Etc…
 |
@@ -23,7 +23,6 @@ sass/
 |   |– _grid.scss        # Grid system
 |   |– _header.scss      # Header
 |   |– _footer.scss      # Footer
-|   |– _sidebar.scss     # Sidebar
 |   |– _forms.scss       # Forms
 |   ...                  # Etc…
 |
@@ -32,22 +31,11 @@ sass/
 |   |– _contact.scss     # Contact specific styles
 |   ...                  # Etc…
 |
-|– themes/
-|   |– _theme.scss       # Default theme
-|   |– _admin.scss       # Admin theme
-|   ...                  # Etc…
-|
 |– utils/
 |   |– _variables.scss   # Sass Variables
 |   |– _functions.scss   # Sass Functions
 |   |– _mixins.scss      # Sass Mixins
-|   |– _helpers.scss     # Class & placeholders helpers
-|
-|– vendors/
-|   |– _bootstrap.scss   # Bootstrap
-|   |– _jquery-ui.scss   # jQuery UI
-|   ...                  # Etc…
-|
+|   |– constants.scss     # Class & placeholders helpers
 |
 `– main.scss             # Main Sass file
 

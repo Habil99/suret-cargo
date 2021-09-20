@@ -1,0 +1,25 @@
+.courier-order-section {
+  width: 100%;
+  max-width: rem(660);
+  margin: rem(60) auto 0;
+
+  .courier-info-table {
+    margin-bottom: rem(50);
+
+    td {
+      @include font-size(18, 500);
+
+      &:first-child {
+        text-align: left;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
+  .btn-courier-order {
+    margin-top: rem(40);
+  }
+}

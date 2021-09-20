@@ -75,6 +75,24 @@
   border-color: #e6e6e7 !important;
 }
 
+._flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 /* Base */
 @font-face {
   font-family: "Prompt";
@@ -1432,6 +1450,10 @@ a {
   margin-right: 0.75rem;
 }
 
+.g-table__sm .table {
+  min-width: 31.25rem !important;
+}
+
 .g-table .table {
   width: 100%;
   border-collapse: separate;
@@ -1523,6 +1545,21 @@ a {
 
 .g-table__btn__collection .g-btn:first-child {
   margin-right: 1.5625rem;
+}
+
+.g-table__bordered td {
+  border: none;
+}
+
+.g-table__bordered tr {
+  border-bottom: 1px solid #E6E6E7;
+}
+
+.g-alert {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Layouts */
@@ -2185,6 +2222,8 @@ a {
   position: relative;
   /* Settings */
   /* Settings */
+  /* Courier */
+  /* Courier */
 }
 
 .g-dashboard__pad {
@@ -2378,6 +2417,10 @@ a {
   font-size: 0.9375rem;
   font-weight: 500;
   font-style: normal;
+}
+
+.g-dashboard__courier {
+  padding: 2.5rem 3.75rem 6.25rem;
 }
 
 .dashboard-form .g-form-group {
@@ -3385,5 +3428,33 @@ a {
 
 .balance-form__buttons .g-btn:last-child {
   margin-left: 1.5625rem;
+}
+
+.courier-order-section {
+  width: 100%;
+  max-width: 41.25rem;
+  margin: 3.75rem auto 0;
+}
+
+.courier-order-section .courier-info-table {
+  margin-bottom: 3.125rem;
+}
+
+.courier-order-section .courier-info-table td {
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.courier-order-section .courier-info-table td:first-child {
+  text-align: left;
+}
+
+.courier-order-section .courier-info-table td:last-child {
+  text-align: right;
+}
+
+.courier-order-section .btn-courier-order {
+  margin-top: 2.5rem;
 }
 /*# sourceMappingURL=main.css.map */

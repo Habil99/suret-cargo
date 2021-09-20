@@ -210,100 +210,74 @@
           <div class="g-tab__carousel">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <a href="create-order.html" class="g-tab__item">Sifariş et</a>
+                <a href="create-courier-order.html" class="g-tab__item g-tab__item__lg active">Kuryer sifarişi</a>
               </div>
               <div class="swiper-slide">
-                <a href="foreign-addresses.html" class="g-tab__item">Xaricdəki ünvanlarım</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="declarations.html" class="g-tab__item">Bağlamar</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="orders-in-queue.html" class="g-tab__item">Sifarişlər</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="balance.html" class="g-tab__item">Balans</a>
-              </div>
-              <div class="swiper-slide">
-                <a href="settings.html" class="g-tab__item active">Tənzimləmələr</a>
+                <a href="courier-order-history.html" class="g-tab__item g-tab__item__lg">Sifariş arxivi</a>
               </div>
             </div>
           </div>
         </div>
         <div class="g-dashboard">
-          <div class="g-dashboard__settings">
-            <div class="dashboard-form">
-              <p class="g-title__md text-center settings-form__title">Tənzimləmələr</p>
-              <form action="">
-                <div class="g-form">
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="g-form-group __gray">
-                        <label for="name" class="g-label">Ad</label>
-                        <input type="text" id="name" class="g-input">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="g-form-group __gray">
-                        <label for="surname" class="g-label">Soyad</label>
-                        <input type="text" id="surname" class="g-input">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="g-form-group __gray">
-                        <label for="" class="g-label">Cins</label>
-                        <input type="text" id="" class="g-input">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="g-form-group __gray">
-                        <label for="address" class="g-label">Ünvan</label>
-                        <input type="text" id="address" class="g-input">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="g-form-group __gray">
-                        <label for="fin_code" class="g-label">Fin kod</label>
-                        <input type="number" id="fin_code" class="g-input">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="g-form-group __gray">
-                        <label for="" class="g-label">Ş.V seriya və nömrəsi</label>
-                        <input type="text" id="" class="g-input">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="g-form-group __gray">
-                        <label for="phone_number" class="g-label">Mobil nömrə</label>
-                        <input type="text" id="phone_number" class="g-input">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="g-form-group __gray">
-                        <label for="branch" class="g-label">Bağlamanı təhvil alacağınız filial</label>
-                        <input type="text" id="branch" class="g-input">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="g-form-group __gray">
-                        <label for="password" class="g-label">Köhnə şifrə</label>
-                        <input type="password" id="password" class="g-input">
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="g-form-group __gray">
-                        <label for="new-password" class="g-label">Yeni şifrə</label>
-                        <input type="password" id="new-password" class="g-input">
-                      </div>
-                    </div>
+          <div class="g-dashboard__courier">
+            <div class="g-alert">
+              <span class="text-red">
+                Diqqət! 17:00-dan sonra verilən kuryer sifarişləri üçün çatdırılma növbəti iş günü həyata
+                keçiriləcəkdir.
+              </span>
+            </div>
+            <div class="courier-order-section">
+              <div class="g-table g-table__sm">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Mağaza</th>
+                      <th>Qiymət</th>
+                      <th>Ödəmə</th>
+                      <th>Ödəniş</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Acarlar</td>
+                      <td>495 TL</td>
+                      <td>212.08 AZN</td>
+                      <td>
+                        <button class="g-btn g-btn__paid">Ödənilib</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="g-table__bordered courier-info-table">
+                <table class="table">
+                  <tbody>
+                    <tr>
+                      <td>Toplam bağlama</td>
+                      <td>0 AZN</td>
+                    </tr>
+                    <tr>
+                      <td>Kuryer xidməti</td>
+                      <td>3 AZN</td>
+                    </tr>
+                    <tr>
+                      <td>Toplam ödəniləcək</td>
+                      <td>3 AZN</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="g-form">
+                <form action="">
+                  <div class="g-form-group">
+                    <label for="address" class="g-label __white">Ünvan</label>
+                    <input type="text" id="address" class="g-input __gray" required placeholder="Çatdırılma ünvanı və əlavə qeydiniz">
                   </div>
-                </div>
-                <p class="settings-form__note">QEYD: Şifrə boş buraxıldıqda dəyişdirilmir. Şifrə dəyişdirmək üçün köhnə ve yeni şifrələri yazmalısınız</p>
-                <div class="d-flex align-items-center justify-content-center">
-                  <button class="g-btn g-btn__md g-btn__blue" type="submit">Dəyişdir</button>
-                </div>
-              </form>
+                  <div class="_flex-center">
+                    <button class="g-btn g-btn__base g-btn__blue btn-courier-order">Kuryer sİfarİş et</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -403,13 +377,53 @@
 
   <!--------------------------- Footer Section --------------------------->
 
+  <!--------------------------- Modal Section --------------------------->
+
+  <div class="modal fade g-modal information-modal" id="significantInformation" tabindex="-1" role="dialog"
+    aria-labelledby="significantInformationTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <p class="g-modal__title">Vacib məlumat !</p>
+          <button type="button" class="g-btn g-btn__close" data-bs-dismiss="modal" aria-label="Close">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="g-modal__text">
+            <span>
+              Bu xidmət zamanı 1 TL - 0.27 AZN olaraq hesablanır. Siz linkləri göndərdikdən sora əməkdaşlarımız
+              sifarişlərinizi həyata keçirir. Sifarişlər həyata keçirildikdən sonra sifarişdə dəyişiklik etmək və ya
+              ləğv
+              etmək mümkün deyil. Sifarişlərin dəyərini bağlamanızı təhvil aldığınız zaman ödəyəcəksiniz.
+            </span>
+            <span>
+              *Qeyd: Sifariş zamanı Türkiyə daxili kargo tələb olunarsa həmin məbləğ balansınıza borc kimi yazılacaq.
+            </span>
+            <span>
+              Diqqət : "Sürət Kargo" satıcı firmanın göndərdiyi məhsulun tamlığına, tərkibinə, ölçü və
+              formasına,orijinallığına və ya işləkliyinə görə məsuliyyət daşımır
+            </span>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="g-btn g-btn__md g-btn__blue" data-bs-dismiss="modal">Razıyam</button>
+          <button type="button" class="g-btn g-btn__md g-btn__blue--outline" data-bs-dismiss="modal">Razı
+            deyiləm</button>
+          <a href="buy-for-me-service.html" class="ms-auto g-btn g-btn__md g-btn__red">Mənim üçün al xidməti</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--------------------------- Modal Section --------------------------->
 
   <script src="./static/js/min/jquery.min.js"></script>
   <script src="./static/js/min/bootstrap.bundle.min.js"></script>
   <script src="./static/js/main.js"></script>
   <script src="./static/js/min/swiper-bundle.min.js"></script>
   <script src="./static/js/dashboard-tabs-carousel.js"></script>
-  <script src="./static/js/tab-carousel.js"></script>
 
 </body>
 
