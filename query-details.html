@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="static/styles/css/main.css" />
 
   <link rel="stylesheet" href="./static/styles/css/fontawesome/all.min.css" defer>
+  <link rel="stylesheet" href="./static/styles/css/swiper/swiper.min.css">
 
   <script src="./static/js/min/all.min.js" defer></script>
 </head>
@@ -41,11 +42,105 @@
               <a class="border-right" href="tel:+">*4466</a>
               <a href="mailto:hello@suretkargo.az">hello@suretkargo.az</a>
             </div>
-            <div class="auth-side">
-              <a href="https://" class="g-btn g-btn__sm g-btn__red btn-login">Daxil ol</a>
-              <a href="https://" class="g-btn g-btn__sm g-btn__red--outline">Qeydiyyat</a>
+            <div class="authenticated">
+              <a href="https://" class="g-btn g-btn__sm online-queues">
+                <img src="./static/assets/svgs/user-group.svg" alt="Suret Cargo">
+                <span>
+                  Online növbə
+                </span>
+              </a>
+              <div class="user-dropdown dropdown">
+                <button class="g-btn g-fade-relative" id="userDropdown" aria-expanded="false" aria-haspopup="true"
+                  data-bs-toggle="dropdown">
+                  Nigar Musazade | 10001
+                </button>
+                <div class="g-dropdown dropdown-menu" aria-labelledby="userDropdown">
+                  <ul class="dropdown-menu__list">
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/map-mark.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Xaricdəki ünvanlarım</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/package.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Bağlamalar</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/cart.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Sifarişlərim</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/coins.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Balans</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/la_coins.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Bonus Balans</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/ri_user-settings-line.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Tənzimləmələr</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/eva_car-outline.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Kuryer sifarişi</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/questions.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Sorğular</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/ic_outline-fact-check.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Etibarnamələr</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/log-out.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Çıxış</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="g-dropdown language-dropdown">
+            <div class="dropdown g-dropdown language-dropdown">
               <button class="g-btn g-fade-relative" id="languagedropdown" aria-expanded="false" aria-haspopup="true"
                 data-bs-toggle="dropdown">
                 <img class="g-fluid" src="./static/assets/svgs/language.svg" alt="Surat Cargo" />
@@ -106,29 +201,38 @@
   </nav>
   <!--------------------------- Navbar --------------------------->
 
-  <!--------------------------- Register Section --------------------------->
-  <div class="success-section">
-    <div class="g-container__lg">
-      <div class="g-backdrop g-backdrop__rtl">
-        <div class="g-form__container g-form__container--md">
-          <p class="g-form__title g-title__md password-update__title">Şifrənin bərpası</p>
-          <div class="register-form">
-            <div class="g-form">
-              <form action="" method="POST" autocomplete="off">
-                <div class="g-form__grid one-col">
-                  <div class="g-form-group">
-                    <label class="g-label" for="password">Yeni şifrə</label>
-                    <input class="g-input" type="pas" id="password">
-                  </div>
-                  <div class="g-form-group">
-                    <label class="g-label" for="confirm-password">Yeni şifrənin təkrarı</label>
-                    <input class="g-input" type="pas" id="password">
-                  </div>
+  <!--------------------------- Dashboard Section --------------------------->
+
+  <div class="dashboard-section">
+    <div class="g-backdrop g-backdrop__rtl">
+      <div class="g-container__md">
+        <div class="g-dashboard">
+          <div class="g-dashboard__query-details">
+            <div class="query-details__heading">
+              <span class="query-details__heading--item">
+                Mövzu: Sifariş haqqında
+              </span>
+              <span class="query-details__heading--item">
+                Status: Bağlanıb
+              </span>
+              <span class="query-details__heading--item">
+                Sorğu tarixi: 22.06.2021/12:20
+              </span>
+            </div>
+            <div class="query-details">
+              <div class="question">
+                <p class="g-text__sm">Musazade Nigar</p>
+                <div class="question-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 </div>
-                <div class="g-form__btn">
-                  <a class="g-btn g-btn__blue recover-pass-btn g-btn__lg" href="https://">Dəyiş</a>
+              </div>
+              <div class="answer">
+                <p class="g-text__sm">Musazade Nigar</p>
+                <div class="answer-text">
+                  Vulputate id interdum morbi vel quis. Etiam morbi quis mi nisl ullamcorper faucibus laoreet quis. Duis
+                  id enim, sed morbi augue mollis.
                 </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
@@ -136,7 +240,7 @@
     </div>
   </div>
 
-  <!--------------------------- Register Section --------------------------->
+  <!--------------------------- Dashboard Section --------------------------->
 
   <!--------------------------- Footer Section --------------------------->
 
@@ -228,10 +332,11 @@
 
   <!--------------------------- Footer Section --------------------------->
 
-
   <script src="./static/js/min/jquery.min.js"></script>
   <script src="./static/js/min/bootstrap.bundle.min.js"></script>
   <script src="./static/js/main.js"></script>
+  <script src="./static/js/min/swiper-bundle.min.js"></script>
+  <script src="./static/js/dashboard-tabs-carousel.js"></script>
 
 </body>
 

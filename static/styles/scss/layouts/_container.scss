@@ -9,3 +9,9 @@
   margin: 0 auto;
   max-width: calc(100% - #{rem($offset-md)} * 2);
 }
+
+.g-container__lg {
+  width: 100%;
+  margin: 0 auto;
+  max-width: calc(100% - #{rem($offset-lg)} * 2);
+}

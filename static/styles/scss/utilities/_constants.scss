@@ -60,3 +60,7 @@
 ._flex-center {
   @include flex-center();
 }
+
+._flex-end {
+  @include justify-end();
+}

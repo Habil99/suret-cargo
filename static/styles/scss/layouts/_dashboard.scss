@@ -149,7 +149,7 @@
   }
 
   /* Settings */
-  
+
   /* Courier */
 
   &__courier {
@@ -158,6 +158,88 @@
 
   /* Courier */
 
+  /* Queries */
+
+  &__queries {
+    @include advancedRem(padding, (20 100 70));
+
+    .queries-title {
+      text-align: center;
+      color: $blue-clr-2;
+    }
+
+    .queries-table {
+      margin-top: rem(65);
+    }
+
+    .btn-add-query {
+      @include box(70);
+      color: $white-clr;
+      background: $blue-gradient;
+      @include font-size(24, 600);
+      border-radius: 50%;
+    }
+  }
+
+  /* Queries */
+
+  &__query-details {
+    @include advancedRem(padding, (0 0 100));
+
+    .query-details__heading {
+      @include justify-between();
+      flex-wrap: wrap;
+      @include advancedRem(padding, (20 30));
+      border-bottom: rem(1) solid $blue-clr-2;
+      margin-bottom: rem(40);
+
+      &--item {
+        @include font-size(18, 400);
+        color: $dark-gray;
+      }
+    }
+
+    .query-details {
+      padding: 0 rem(50);
+      width: 100%;
+      max-width: rem(880);
+      margin: 0 auto;
+    }
+
+    .question {
+      margin-bottom: rem(35);
+      
+      p {
+        margin-bottom: 0;
+      }
+
+      &-text {
+        margin-top: rem(10);
+        background: $blue-gradient;
+        @include advancedRem(padding, (25 40 36));
+        color: $white-clr;
+        @include font-size(17, 600);
+      }
+    }
+
+    .answer {
+      
+      p {
+        margin-bottom: 0;
+      }
+      
+      &-text {
+        margin-top: rem(10);
+        background: #CCD0E8;
+        @include advancedRem(padding, (28 50 36 40));
+        @include font-size(17, 300);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: rem(35);
+      }
+    }
+  }
 }
 
 .dashboard-form {
