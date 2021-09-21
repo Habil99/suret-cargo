@@ -38,7 +38,7 @@ body {
   color: $dark-gray;
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1200px) {
   html {
     font-size: calc(100vw / 1920 * 20);
   }
