@@ -48,6 +48,154 @@
 
 .calculator-section {
   @include advancedRem(margin, 46 0 0);
+  @include advancedRem(padding, (50 0));
+  background-color: #eaeafa;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr rem(230) rem(160) 1fr;
+    grid-gap: rem(20);
+
+    .nice-select,
+    .list {
+      width: 100%;
+    }
+
+    .nice-select,
+    #delivery-price,
+    #weight {
+      height: rem(70) !important;
+    }
+
+    #country-select {
+      .nice-select {
+        @include pseudo() {
+          top: 50%;
+          background: transparent url("../../assets/svgs/icons/location-mark.svg") no-repeat;
+          background-size: contain;
+          left: rem(35);
+          width: rem(18);
+          height: rem(25);
+          transform: translateY(-50%);
+        }
+
+        .current {
+          margin-left: rem(75);
+        }
+      }
+    }
+
+    .nice-select {
+      background-color: $white-clr;
+      border: none;
+      outline: none;
+      border-radius: rem(60);
+      @include advancedRem(padding, (20 35));
+      height: auto;
+      font-size: 18px;
+      color: #656565;
+      position: relative;
+      z-index: 3;
+      display: flex;
+      align-items: center;
+
+      &::after {
+        border-bottom: rem(2) solid $dark-gray;
+        border-right: rem(2) solid $dark-gray;
+        width: rem(10);
+        height: rem(10);
+        right: rem(30);
+      }
+
+      .current {
+        display: inline-block;
+        padding-right: rem(20);
+        max-width: rem(300);
+      }
+
+      .current,
+      .option {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .list {
+        @include advancedRem(border-radius, (30 30 60 60));
+        margin-top: rem(-60);
+        z-index: -1;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        @include advancedRem(padding, (60 0 50));
+
+        .option {
+          @include advancedRem(padding, (8 20 8 50));
+          @include font-size(18, 400);
+
+          &.selected,
+          &.focus {
+            background: #e9eaeb;
+          }
+        }
+      }
+    }
+
+    #unit-of-weight {
+      .current,
+      .option {
+        text-transform: uppercase;
+      }
+
+      .option {
+        padding-left: rem(35);
+      }
+    }
+
+    #weight {
+      @include justify-between();
+      background-color: $white-clr;
+      border-radius: rem(60);
+      padding: 0 rem(30);
+
+      input {
+        width: 100%;
+        text-align: center;
+        @include font-size(19, 400);
+        color: $black-clr;
+        border: none;
+        outline: none;
+        margin: 0 rem(5);
+      }
+    }
+
+    #delivery-price {
+      height: rem(70);
+      background-color: $white-clr;
+      border-radius: rem(60);
+      display: flex;
+      align-items: stretch;
+      
+      .delivery-price-title {
+        flex: 1;
+        @include flex-center();
+        justify-content: flex-start;
+        padding: 0 rem(30);
+        @include font-size(19, 400);
+        color: $black-clr;
+      }
+    }
+
+    #total-price {
+      background-color: $red-clr;
+      @include advancedRem(border-radius, (0 50 50 0));
+      @include flex-center();
+      color: $white-clr;
+      @include font-size(20, 500);
+      padding: 0 rem(15);
+      min-width: rem(100);
+    }
+  }
 }
 
 .services-section {
@@ -166,7 +314,7 @@
 }
 
 .shops-carousel__main {
-  background-color: #DADEF0;
+  background-color: #dadef0;
   padding: rem(10) 0;
   margin-bottom: rem(100);
 

@@ -13,10 +13,10 @@
 
   <title>Surat Cargo</title>
   <link rel="shortcut icon" href="./static/assets/svgs/logo.svg" type="image/x-icon">
-  <link rel="stylesheet" href="static/styles/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/styles/css/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="./static/styles/css/swiper/swiper.min.css">
-  <link rel="stylesheet" href="static/styles/css/main.css" />
-
+  <link rel="stylesheet" href="./static/styles/css/main.css" />
+  <link rel="stylesheet" href="./static/styles/css/nice-select/nice-select.min.css">
   <link rel="stylesheet" href="./static/styles/css/fontawesome/all.min.css">
 
   <script src="./static/js/min/all.min.js"></script>
@@ -218,7 +218,41 @@
 
   <!--------------------------- Calculator Section --------------------------->
 
-  <section class="calculator-section"></section>
+  <section class="calculator-section">
+    <div class="g-backdrop g-backdrop__ltr">
+      <div class="g-container">
+        <div class="calculator-section__grid">
+          <div id="country-select">
+            <select name="" id="">
+              <option value="1" selected>Türkiyə</option>
+              <option value="2">ABŞ</option>
+              <option value="3">Çin</option>
+            </select>
+          </div>
+          <div id="weight">
+            <button class="g-btn">
+              <i class="fas fa-minus"></i>
+            </button>
+            <input type="number" name="" id="" value="0">
+            <button class="g-btn">
+              <i class="fas fa-plus"></i>
+            </button>
+          </div>
+          <div id="unit-of-weight">
+            <select name="" id="">
+              <option value="1" selected>kq</option>
+              <option value="1" selected>qr</option>
+            </select>
+          </div>
+          <div id="delivery-price">
+            <span class="delivery-price-title">Çatdırılma qiyməti</span>
+            <span id="total-price">$0.00</span>
+            <!-- <input type="text" value="$0.00" /> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!--------------------------- Calculator Section --------------------------->
 
@@ -595,10 +629,12 @@
 
 
   <script src="./static/js/min/jquery.min.js"></script>
+  <script src="./static/js/min/nice-select.min.js"></script>
   <script src="./static/js/min/bootstrap.bundle.min.js"></script>
   <script src="./static/js/min/swiper-bundle.min.js"></script>
   <script src="./static/js/carousel.js"></script>
   <script src="./static/js/count-animation.js"></script>
+  <script src="./static/js/calculator-selects.js"></script>
 
 </body>
 
