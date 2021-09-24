@@ -31,12 +31,15 @@
         <div class="g-container">
           <div class="g-nav__top">
             <div class="address-info">
-              <address class="border-right">Masazır qəsəbəsi, Əliağa Vahid küçəsi</address>
-              <a class="border-right" href="tel:+">*4466</a>
-              <a href="mailto:hello@suretkargo.az">hello@suretkargo.az</a>
+              <address class="border-right lg-hidden">Masazır qəsəbəsi, Əliağa Vahid küçəsi</address>
+              <a class="border-right" id="phone-nav" href="tel:+">
+                <img src="./static/assets/svgs/icons/phone-sm.svg" alt="" class="lg-m-hidden">
+                <span>*4466</span>
+              </a>
+              <a class="lg-hidden" href="mailto:hello@suretkargo.az">hello@suretkargo.az</a>
             </div>
             <div class="authenticated">
-              <a href="https://" class="g-btn g-btn__sm online-queues">
+              <a href="online-queue.html" class="g-btn g-btn__sm online-queues lg-hidden">
                 <img src="./static/assets/svgs/user-group.svg" alt="Suret Cargo">
                 <span>
                   Online növbə
@@ -106,6 +109,14 @@
                       </a>
                     </li>
                     <li>
+                      <a href="online-queue.html">
+                        <span class="user-dropdown__icon">
+                          <img src="./static/assets/svgs/icons/online-queue.svg" alt="Suret Cargo">
+                        </span>
+                        <span>Online növbə</span>
+                      </a>
+                    </li>
+                    <li>
                       <a href="queries.html">
                         <span class="user-dropdown__icon">
                           <img src="./static/assets/svgs/questions.svg" alt="Suret Cargo">
@@ -161,13 +172,16 @@
       </div>
       <div class="g-container">
         <div class="g-nav__bottom">
-          <div class="g-flex">
+          <div class="g-flex _lg-align-center">
             <div class="flex-shrink-0">
               <a href="index.html" class="navbar-brand">
-                <img class="g-fluid" src="./static/assets/svgs/logo.svg" alt="Surat Cargo">
+                <picture>
+                  <source media="(min-width: 1024px)" srcset="./static/assets/svgs/logo.svg">
+                  <img class="g-fluid" src="./static/assets/svgs/mobile-logo.svg" alt="Surat Cargo">
+                </picture>
               </a>
             </div>
-            <div class="g-flex__shrink-0 g-flex__grow">
+            <div class="g-flex__shrink-0 g-flex__grow lg-hidden">
               <div class="g-nav__links">
                 <ul class="g-nav__link-list">
                   <li class="g-nav__link">
@@ -188,8 +202,13 @@
                 </ul>
               </div>
             </div>
-            <div class="">
-              <a class="g-btn g-btn__blue g-btn__md" href="https://">Sifariş et</a>
+            <div class="_lg-ms-auto">
+              <button class="g-btn hamburger-btn lg-m-hidden" data-bs-toggle="modal" data-bs-target="#responsiveNavbar">
+                <span class="hamburger-btn__vector"></span>
+                <span class="hamburger-btn__vector"></span>
+                <span class="hamburger-btn__text">Menu</span>
+              </button>
+              <a class="g-btn g-btn__blue g-btn__md lg-hidden" href="https://">Sifariş et</a>
             </div>
           </div>
         </div>
@@ -201,14 +220,16 @@
   <!--------------------------- Introduction Banner --------------------------->
 
   <section class="intro-section">
-    <div class="g-container">
-      <div class="intro-section__grid">
-        <div class="intro-section-content">
-          <h1 class="g-title__lg g-title__blue">Hər şey <br> barmaqlarınızın <br> ucunda!</h1>
-          <a class="g-btn g-btn__md g-btn__red" href="https://">Ətraflı</a>
-        </div>
-        <div class="intro-section-img">
-          <img class="g-fluid" src="./static/assets/svgs/banner.svg" alt="Surat Cargo">
+    <div class="g-backdrop g-backdrop__rtl">
+      <div class="g-container">
+        <div class="intro-section__grid">
+          <div class="intro-section-content">
+            <h1 class="g-title__lg g-title__blue">Hər şey <br> barmaqlarınızın <br> ucunda!</h1>
+            <a class="g-btn g-btn__md g-btn__red" href="https://">Ətraflı</a>
+          </div>
+          <div class="intro-section-img">
+            <img class="g-fluid" src="./static/assets/svgs/banner.svg" alt="Surat Cargo">
+          </div>
         </div>
       </div>
     </div>
@@ -626,6 +647,43 @@
   </div>
 
   <!--------------------------- Footer Section --------------------------->
+
+  <!--------------------------- Responsive Navbar Section --------------------------->
+
+  <div class="modal fade navbar-modal" id="responsiveNavbar" tabindex="-1" role="dialog"
+    aria-labelledby="responsiveNavbar" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a href="index.html" class="navbar-modal__logo">
+            <img src="./static/assets/svgs/logo.svg" alt="Suret Cargo">
+        </div>
+        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        <div class="modal-body">
+          <ul class="navbar-modal__links">
+            <li class="navbar-modal__links--item">
+              <a href="index.html">Ana səhİfə</a>
+            </li>
+            <li class="navbar-modal__links--item">
+              <a href="about.html">Haqqımızda</a>
+            </li>
+            <li class="navbar-modal__links--item">
+              <a href="services.html">Xidmətlər</a>
+            </li>
+            <li class="navbar-modal__links--item">
+              <a href="faq.html">Tez-tez verİlən suallar</a>
+            </li>
+            <li class="navbar-modal__links--item">
+              <a href="contact.html">Əlaqə</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--------------------------- Responsive Navbar Section --------------------------->
 
 
   <script src="./static/js/min/jquery.min.js"></script>

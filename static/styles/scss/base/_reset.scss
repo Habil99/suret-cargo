@@ -30,7 +30,7 @@ html {
 body {
   font-family: "Prompt", sans-serif !important;
   background-color: #E5E5E5;
-  
+
   /* if you prefer to performance, you should choose this way */
 
   // background: rgb(146, 165, 243);
@@ -38,7 +38,7 @@ body {
   color: $dark-gray;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1024px) {
   html {
     font-size: calc(100vw / 1920 * 20);
   }

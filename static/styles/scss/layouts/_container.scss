@@ -2,6 +2,14 @@
   width: 100%;
   margin: 0 auto;
   max-width: calc(100% - #{rem($offset)} * 2);
+
+  @include breakpoint-max($desktop-width) {
+    max-width: calc(100% - #{rem($offset / 2)} * 2);
+  }
+
+  @include breakpoint-max($tablet-width) {
+    max-width: calc(100% - #{rem($offset / 5)} * 2);
+  }
 }
 
 .g-container__md {

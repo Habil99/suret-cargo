@@ -7,15 +7,27 @@
 
   &__top {
     @include justify-end();
-    @include advancedRem(padding, (28 0 25 0));
+    @include advancedRem(padding, (25 0));
+
+    // @include breakpoint-max($desktop-width) {
+    //   @include advancedRem(padding, (25 0 0));
+    // }
   }
 
   &__bottom {
     @include advancedRem(padding, (43 0 37 0));
+
+    @include breakpoint-max($desktop-width) {
+      @include advancedRem(padding, (20 0 20 0));
+    }
   }
 
   &__border {
     border-bottom: 1px solid $solid-blue-border;
+
+    // @include breakpoint-max($desktop-width) {
+    //   border: none;
+    // }
   }
 
   .btn-login {
@@ -25,6 +37,10 @@
   .address-info {
     @include align-center();
     margin-right: rem(110);
+
+    @include breakpoint-max($desktop-width) {
+      margin-right: 0;
+    }
 
     * {
       color: $dark-gray;
@@ -37,7 +53,8 @@
       margin-right: 6px;
     }
 
-    a {
+    a,
+    a * {
       @include transition();
       @include action-css((hover, active)) {
         color: $red-clr;
@@ -52,6 +69,14 @@
         height: rem(21);
         background-color: $dark-gray;
         @include toRem(width, 2);
+      }
+
+      @include breakpoint-max($desktop-width) {
+        @include pseudo(after) {
+          width: 0;
+          height: 0;
+          display: none;
+        }
       }
     }
   }
@@ -98,6 +123,89 @@
 
         @include action-css((hover, active)) {
           color: $red-clr;
+        }
+      }
+    }
+  }
+
+  .hamburger-btn {
+    @include flex-center(column);
+    width: rem(40);
+    // height: rem(40);
+
+    &__vector {
+      width: 100%;
+      display: inline-block;
+      height: rem(5);
+      margin-bottom: rem(6);
+      background-color: $dark-gray;
+      border-radius: rem(12);
+    }
+
+    &__text {
+      @include font-size(10, 500);
+      letter-spacing: 0.25em;
+      align-self: flex-start;
+      color: $black-clr;
+    }
+  }
+}
+
+.navbar-modal {
+  .modal-dialog {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    border: none;
+  }
+
+  .modal-content {
+    border: none;
+    background: #ffffff;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 0;
+  }
+
+  .modal-header {
+    @include flex-center();
+    @include advancedRem(padding, (40, 30));
+    border: none;
+
+    @include breakpoint-min($tablet-width) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    text-align: center;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+
+      @include breakpoint-min($tablet-width) {
+        width: calc(100% - #{rem(120)});
+      }
+    }
+  }
+
+  &__links {
+    @include advancedRem(padding, (0 30));
+
+    &--item {
+      a {
+        display: block;
+        @include font-size(16, 24);
+        text-transform: uppercase;
+        color: $dark-gray;
+        @include advancedRem(padding, (8 0));
+        @include transition();
+
+        &:hover,
+        &.active {
+          color: $red-clr
+          ;
         }
       }
     }

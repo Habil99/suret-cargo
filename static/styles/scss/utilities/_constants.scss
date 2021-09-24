@@ -72,3 +72,26 @@
 .w-content {
   width: max-content !important;
 }
+
+@include breakpoint-max($desktop-width) {
+  /* lg-something means this condition will work if screen size is smaller than given width */
+  /* lg-md-something this condition will work if screen size is greater than given width */
+
+  .lg-hidden {
+    display: none !important;
+  }
+
+  ._lg-ms-auto {
+    margin-left: auto;
+  }
+
+  ._lg-align-center {
+    align-items: center;
+  }
+}
+
+@include breakpoint-min($desktop-width) {
+  .lg-m-hidden {
+    display: none !important;
+  }
+}
